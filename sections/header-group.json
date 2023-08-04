@@ -1,0 +1,338 @@
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "header-mobile": {
+      "type": "header-mobile",
+      "blocks": {
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944": {
+          "type": "menu",
+          "settings": {
+            "color": "#232323"
+          }
+        },
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53": {
+          "type": "search",
+          "settings": {
+            "color": "#232323"
+          }
+        },
+        "550fbd21-75fb-4051-9dee-77d91b5239f0": {
+          "type": "logo",
+          "settings": {
+            "logo_width_mobile": 65,
+            "logo_text": "",
+            "logo_font_size": 20,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#232323"
+          }
+        },
+        "20dae707-64c0-4ea3-a05e-561cae9836d8": {
+          "type": "customer",
+          "settings": {
+            "icon": "1",
+            "color": "#232323"
+          }
+        },
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d": {
+          "type": "cart",
+          "settings": {
+            "icon": "2",
+            "color": "#232323",
+            "color_bubble": "#323232",
+            "bg_bubble": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944",
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53",
+        "550fbd21-75fb-4051-9dee-77d91b5239f0",
+        "20dae707-64c0-4ea3-a05e-561cae9836d8",
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d"
+      ],
+      "settings": {
+        "background": "#ffffff",
+        "gradient": "",
+        "sticky_header_type": "on_scroll",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "6e73a8ba-e0ff-4407-8293-e0c6001d6d10": {
+      "type": "header-utility",
+      "blocks": {
+        "sections--18775435182389__6e73a8ba-e0ff-4407-8293-e0c6001d6d10-16896303794dafa17a-0": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo_sg_7.jpg",
+            "logo_width": 80,
+            "logo_text": "S&G Apparel",
+            "logo_font_size": 30,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#232323"
+          }
+        },
+        "sections--18775435182389__6e73a8ba-e0ff-4407-8293-e0c6001d6d10-16896303794dafa17a-1": {
+          "type": "text",
+          "settings": {
+            "customer_service_text": "<p><a href=\"\/collections\/new-arrivals\" title=\"New Arrivals\"><strong>NEW ARRIVALS<\/strong><\/a><strong> | <\/strong><a href=\"\/collections\/pre-order\" title=\"Pre-Order\"><strong>PRE-ORDER<\/strong><\/a><strong> | <\/strong><a href=\"\/collections\/sale\" title=\"Sale\"><strong>SALE<\/strong><\/a><\/p>",
+            "text_color": "#2d2d2d"
+          }
+        },
+        "sections--18775435182389__6e73a8ba-e0ff-4407-8293-e0c6001d6d10-16896303794dafa17a-2": {
+          "type": "search",
+          "settings": {
+            "search_color": "#a5a5a5",
+            "bg_search_color": "#f6f6f6",
+            "search_icon_color": "#000000",
+            "search_border_radius": 5
+          }
+        },
+        "sections--18775435182389__6e73a8ba-e0ff-4407-8293-e0c6001d6d10-16896303794dafa17a-3": {
+          "type": "function_group",
+          "settings": {
+            "show_customer": true,
+            "customer_color": "#232323",
+            "show_wishlist": true,
+            "wishlist_color": "#232323",
+            "show_cart": true,
+            "cart_color": "#232323",
+            "cart_color_item": "#ffffff",
+            "cart_bg_item": "#000000",
+            "cart_item_font_size": 12,
+            "show_language_currency": true,
+            "language_currency_color": "#232323"
+          }
+        }
+      },
+      "block_order": [
+        "sections--18775435182389__6e73a8ba-e0ff-4407-8293-e0c6001d6d10-16896303794dafa17a-0",
+        "sections--18775435182389__6e73a8ba-e0ff-4407-8293-e0c6001d6d10-16896303794dafa17a-1",
+        "sections--18775435182389__6e73a8ba-e0ff-4407-8293-e0c6001d6d10-16896303794dafa17a-2",
+        "sections--18775435182389__6e73a8ba-e0ff-4407-8293-e0c6001d6d10-16896303794dafa17a-3"
+      ],
+      "settings": {
+        "container": "1770",
+        "padding_full_width": 0,
+        "header_bg": "#ffffff",
+        "header_bg_gradient": "",
+        "padding_top": 18,
+        "padding_bottom": 1
+      }
+    },
+    "4ca2e106-e160-485c-9229-9b5d5c212f77": {
+      "type": "header-navigation-plain",
+      "blocks": {
+        "sections--18775435182389__4ca2e106-e160-485c-9229-9b5d5c212f77-16896303974b77e5b7-1": {
+          "type": "main_menu",
+          "settings": {
+            "menu": "main-menu",
+            "menu_top_spacing": 11,
+            "menu_bottom_spacing": 12,
+            "grid_gap_menu_item": 20,
+            "alignment": "left",
+            "bg_mega_menu": "#ffffff",
+            "bg_mega_menu_gradient": "",
+            "lv_1_color": "#000000",
+            "lv_1_color_hover": "#3c3c3c",
+            "lv_2_color": "#000000",
+            "lv_2_color_hover": "#3c3c3c",
+            "lv_3_color": "#000000",
+            "lv_3_color_hover": "#3c3c3c",
+            "sale_item_1": "",
+            "sale_item_2": "",
+            "sale_item_3": "",
+            "sale_item_color": "#d12442",
+            "label_position": "main_menu",
+            "show_label_blink": false,
+            "new_label_1": "",
+            "new_label_2": "",
+            "new_label_3": "",
+            "new_label_color": "#ffffff",
+            "new_label_bg": "#bae4ed",
+            "new_label_bg_gradient": "",
+            "sale_label_1": "",
+            "sale_label_2": "",
+            "sale_label_3": "",
+            "sale_label_color": "#ffffff",
+            "sale_label_bg": "#d12442",
+            "sale_label_bg_gradient": "",
+            "hot_label_1": "",
+            "hot_label_2": "",
+            "hot_label_3": "",
+            "hot_label_color": "#ffffff",
+            "hot_label_bg": "#fff993",
+            "hot_label_bg_gradient": ""
+          }
+        },
+        "23d51150-4e73-41ce-9043-3e2f6c5b4c14": {
+          "type": "megamenu_style_1",
+          "settings": {
+            "layout_block": "full",
+            "header_custom_width_size": 1520,
+            "item": "Activewear",
+            "column": 3,
+            "show_banner_1": true,
+            "banner_1": "shopify:\/\/shop_images\/mega_activewear_2.jpg",
+            "banner_url_1": "shopify:\/\/collections\/activewear",
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        },
+        "686b83ff-3544-4053-830e-4cd09086208b": {
+          "type": "megamenu_style_1",
+          "settings": {
+            "layout_block": "full",
+            "header_custom_width_size": 1200,
+            "item": "Leggings",
+            "column": 3,
+            "show_banner_1": true,
+            "banner_1": "shopify:\/\/shop_images\/mega_leggings.jpg",
+            "banner_url_1": "shopify:\/\/collections\/leggings",
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        },
+        "4b289b7b-a1ee-406f-8773-edabd598d9d6": {
+          "type": "megamenu_style_1",
+          "settings": {
+            "layout_block": "full",
+            "header_custom_width_size": 1200,
+            "item": "New Arrivals",
+            "column": 2,
+            "show_banner_1": true,
+            "banner_1": "shopify:\/\/shop_images\/mega_new.jpg",
+            "banner_url_1": "shopify:\/\/collections\/new-arrivals",
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        },
+        "99b6b05a-bf23-4d9c-b1ac-f2f3b1778dcc": {
+          "type": "megamenu_style_1",
+          "settings": {
+            "layout_block": "full",
+            "header_custom_width_size": 1200,
+            "item": "Pre-Order",
+            "column": 2,
+            "show_banner_1": true,
+            "banner_1": "shopify:\/\/shop_images\/mega_preorder.jpg",
+            "banner_url_1": "shopify:\/\/collections\/pre-order",
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        },
+        "45833dc2-fa85-4b38-a1b0-9609202c555b": {
+          "type": "megamenu_style_1",
+          "settings": {
+            "layout_block": "full",
+            "header_custom_width_size": 1200,
+            "item": "Sale",
+            "column": 3,
+            "show_banner_1": true,
+            "banner_1": "shopify:\/\/shop_images\/mega_sale.jpg",
+            "banner_url_1": "shopify:\/\/collections\/sale",
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        },
+        "176fd526-abd7-4307-b6c6-fcb26e1b3222": {
+          "type": "megamenu_style_1",
+          "settings": {
+            "layout_block": "full",
+            "header_custom_width_size": 1200,
+            "item": "Sleepwear",
+            "column": 3,
+            "show_banner_1": false,
+            "banner_url_1": "",
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        },
+        "736310a1-1d3a-442b-ab8a-ebaaa21ed3a2": {
+          "type": "megamenu_style_1",
+          "settings": {
+            "layout_block": "full",
+            "header_custom_width_size": 1200,
+            "item": "Bottoms",
+            "column": 3,
+            "show_banner_1": true,
+            "banner_1": "shopify:\/\/shop_images\/mega_bottoms.jpg",
+            "banner_url_1": "shopify:\/\/collections\/bottoms",
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "sections--18775435182389__4ca2e106-e160-485c-9229-9b5d5c212f77-16896303974b77e5b7-1",
+        "23d51150-4e73-41ce-9043-3e2f6c5b4c14",
+        "686b83ff-3544-4053-830e-4cd09086208b",
+        "4b289b7b-a1ee-406f-8773-edabd598d9d6",
+        "99b6b05a-bf23-4d9c-b1ac-f2f3b1778dcc",
+        "45833dc2-fa85-4b38-a1b0-9609202c555b",
+        "176fd526-abd7-4307-b6c6-fcb26e1b3222",
+        "736310a1-1d3a-442b-ab8a-ebaaa21ed3a2"
+      ],
+      "settings": {
+        "container": "full",
+        "padding_full_width": 40,
+        "header_navigation_bg": "#ffffff",
+        "header_navigation_bg_gradient": "",
+        "sticky_header_type": "on_scroll",
+        "sticky_header_width": "full",
+        "enable_transparent": false,
+        "transparent_color": "#000000",
+        "transparent_color_hover": "#3c3c3c"
+      }
+    },
+    "83c728f3-891a-4c6c-95f4-ca28292b36af": {
+      "type": "announcement-bar",
+      "blocks": {
+        "da488dfe-f00b-4bc0-8586-84c9a81006cf": {
+          "type": "countdown",
+          "settings": {
+            "top_message_text": "MAGIC MONTH 10% discount applied at checkout - Ends August 31st Midnight PST",
+            "annou_countdown": "Sep 01, 2023 00:00:00",
+            "color_countdown_text": "#000000",
+            "border_color_countdown": "#FFFFFF",
+            "bg_color_countdown": "#FFFFFF"
+          }
+        }
+      },
+      "block_order": [
+        "da488dfe-f00b-4bc0-8586-84c9a81006cf"
+      ],
+      "settings": {
+        "enable_announcement": true,
+        "layout": "slider",
+        "enable_close": false,
+        "color_text": "#000000",
+        "bg_color_text": "#FFFFFF",
+        "bg_color_text_gradient": "",
+        "font_size_text": 16,
+        "font_style_text": "normal",
+        "font_weight_text": "700",
+        "arrow_active": false,
+        "content_max_width": 100,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "header-mobile",
+    "6e73a8ba-e0ff-4407-8293-e0c6001d6d10",
+    "4ca2e106-e160-485c-9229-9b5d5c212f77",
+    "83c728f3-891a-4c6c-95f4-ca28292b36af"
+  ]
+}
