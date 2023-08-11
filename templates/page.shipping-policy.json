@@ -1,0 +1,83 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "0eb1d821-709f-4d24-ab40-b4e6901f8657": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "559b11fe-1c91-4186-a7f4-39e5240c877c": {
+          "type": "paragraph",
+          "settings": {
+            "title": "",
+            "question_1": "Processing time",
+            "answer_1": "<p>All orders are subject to processing time that is separate and apart from the time it takes for a shipment to reach its destination once it has been picked up from our fulfillment center by the applicable carrier. Depending on a number of factors, standard domestic and international orders may take up to 4 business days (excluding Saturdays, Sundays, and Holidays) to process.\n<br>\n<br>\nAfter your payment is authorized and verified, Standard orders can still take up to 4 business days, Expedited orders can still take up to 3 business days, and Rush orders can still take up to 1 business day to process. This is just an estimate and doesn't include weekends or holidays.<\/p>",
+            "question_2": "Shipping rates & timelines",
+            "answer_2": "<a href=\"https:\/\/sngapparelinc.com\/apps\/17TRACK\">Track My Order<\/a>\n<p>Please note that orders to US destinations may take 1-12 business days from the date that it is shipped out, not necessarily from the date that it is placed, depending on the shipping method selected and final destination of the order.\n<br>\n<br>\nWhen your order has been shipped, you will receive an email with tracking information.\n<br><br>\nFor U.S. Domestic &amp; International orders, we will use USPS or UPS to ship to most locations. Alternative carriers may be selected at our sole discretion to meet shipping requirements.\n<br><br>\nYour final shipping cost is displayed at the point of checkout.<\/p>",
+            "question_3": "Shipping fees",
+            "answer_3": "<p>Shipping fees are non-refundable. If you refuse any shipments from fashionnova.com, you will be held responsible for the original shipping charges, plus the cost of returning the package to us. This amount will be deducted from any credit issued.\n<br><br>\nWe will ship to PO Boxes via USPS. However, expedited shipping is not available to a PO Box.<\/p>",
+            "question_4": "Delivery policy",
+            "answer_4": "<p>If your package is lost or missing, you must contact us within 30 days of the delivery date to be eligible for a store credit or reship. Fashion Nova does not guarantee responsibility for packages that have been reported as “Delivered” by the carrier and will review on a case by case basis.<\/p>",
+            "question_5": "Delivery claims",
+            "answer_5": "<p>We will assist you in working with the carrier to complete the claims process. Please note: Claims can take up to 30 days to complete (depending on the shipping carrier used).\n<br><br>\nFashion Nova does not hold or accept responsibility for packages that have been reported as delivered by the carrier. We do not issue refunds or credits for packages that the carrier confirms as being delivered.<\/p>",
+            "question_6": "Out of stock items",
+            "answer_6": "<p>If your order includes multiple items and one (or more) of the items are out of stock: we will go ahead and ship the rest of your order, issuing a refund to your original form of payment for the item(s) not in stock.<\/p>",
+            "question_7": "Reserved rights regarding shipping",
+            "answer_7": "While we will make every effort to accommodate your shipping and billing preferences, in order to protect our #NovaBabes, Fashion Nova reserves the right to require customers to use a “common” shipping and billing address in the event we are unable to process an order or verify a shipping address provided.\n<br>\n<br>\nAdditionally, Fashion Nova reserves the right to solely define and limit, refuse, and\/or cancel orders from customers at any time due to:\n<br>\n<ul>\n    <li>An irregular or excessive returns history indicative of \"wardrobing;\"<\/li>\n    <li>An irregular or excessive returns history involving worn, altered, laundered, damaged, or missing items; or<\/li>\n    <li>Potential fraudulent or criminal activity.<\/li>\n<\/ul>\n<br>\nSimilarly, Fashion Nova reserves the right to limit, refuse, and\/or reject returns (both in-store and online) to any customer or entity, due to similar actions as noted above.",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "559b11fe-1c91-4186-a7f4-39e5240c877c"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "container",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "show_faqs_filter": true,
+        "faqs_text": "To ensure that your package is properly delivered and that you receive your package within the time frames we advertise, please make sure that your address is correctly entered and includes all relevant and\/or required information. The use of correct abbreviations, street numbers, building or apartment numbers, and route information (if applicable) is critical for ensuring timely delivery. We do not take responsibility for lost, misplaced, or incorrectly delivered shipments if the address information provided is incorrect or incorrectly entered at the time of purchase.\n<br>\n<br>\nWe will ship to PO Boxes via USPS. However, expedited shipping is not available to a PO Box. Orders shipping to APO’s, and US Territories may experience delays. Other carrier options are available, and we reserve the right to change carriers at any time.\n<br><br>\nFor international shipments, the goods will be imported on behalf of the consignee\/buyer. The consignee authorizes Fashion Nova to import the goods on his behalf. Further, the consignee\/buyer agrees Fashion Nova may delegate the obligation to import the goods on his behalf to a subcontractor (e.g. customs broker). The consignee will pay the taxes & duties in addition with the purchase price of the goods.",
+        "faqs_message_heading": "",
+        "faqs_message_text": "",
+        "message_method_link_1": "",
+        "message_method_text_1": "",
+        "message_method_link_2": "",
+        "message_method_text_2": "",
+        "contact_content_text": "Unable to find satisfactory answers ?",
+        "contact_text": "Contact Support",
+        "contact_link": "",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#ef6454",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#ef6454",
+        "contact_color_bg_hover": "#ef6454",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "0eb1d821-709f-4d24-ab40-b4e6901f8657"
+  ]
+}

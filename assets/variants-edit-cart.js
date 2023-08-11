@@ -562,13 +562,17 @@ class QuantityEditCartInput extends HTMLElement {
         var maxValue = parseInt(this.input.dataset.inventoryQuantity);
         const value = Number(this.input.value);
         if (event.target.classList.contains('plus')) {
-            var newVal = value + 1;
+            var newVal = value + 6;
         } else {
-            var newVal = value - 1;
+            if (value > 12) {
+                var newVal = value - 6;
+            } else {
+                var newVal = 6;
+            }            
         }
 
         if(inputValue < 1) {
-            newVal = 1;
+            newVal = 6;
             this.input.value =  newVal;
         }  
               
@@ -594,9 +598,9 @@ class QuantityEditCartInput extends HTMLElement {
         var inputValue = Number(this.input.value);
         var inventoryQuantity = Number(this.input.dataset.quantity);
 
-        if(inputValue < 1) {
-            inputValue = 1;
-            this.input.value =  inputValue;
+        if(inputValue < 6) {
+            inputValue = 6;
+            this.input.value = inputValue;
         } else {
             if (inventoryQuantity < inputValue) {
                 var message = window.inventory_text.warningQuantity.replace('[inventory]', inventoryQuantity);

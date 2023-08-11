@@ -110,9 +110,7 @@
                           loading="lazy"
                           data-sizes="auto">
                       </div>
-                      <div
-                        class="productView-video vimeo"
-                        data-vimeo>
+                      <div class="productView-video vimeo" data-vimeo>
                         {{ media | external_video_tag }}
                       </div>
                     {%- endif -%}
@@ -656,11 +654,11 @@
                           {%- if is_swatch -%}
                             <label class="product-form__label {% if variant.available %} available{% else %} soldout{% endif %}" for="option-quick-view-{{ product.id }}-{{ option.name }}-{{ forloop.index0 }}">
                               <span class="pattern" style="background-color: {{ value | split: ' ' | last | handle }};
-                                                                                                        {%- if swatch_type == 'variant_image' and variant.image %}
-                                                                                                        background-image: url({{ variant.image.src | product_img_url: '40x'}});
-                                                                                                        {% else %}
-                                                                                                        background-image: url({{ value | handle | append: '.' | append: file_extension | file_url }})
-                                                                                                        {% endif %}"></span>
+                                                                                                                                        {%- if swatch_type == 'variant_image' and variant.image %}
+                                                                                                                                        background-image: url({{ variant.image.src | product_img_url: '40x'}});
+                                                                                                                                        {% else %}
+                                                                                                                                        background-image: url({{ value | handle | append: '.' | append: file_extension | file_url }})
+                                                                                                                                        {% endif %}"></span>
                             </label>
                           {%- else -%}
                             <label class="product-form__label{% if variant.available %} available{% else %} soldout{% endif %}" for="option-quick-view-{{ product.id }}-{{ option.name }}-{{ forloop.index0 }}">
@@ -756,8 +754,8 @@
                         class="form-input quantity__input quantity"
                         type="number"
                         name="quantity"
-                        min="1"
-                        value="1"
+                        min="6"
+                        value="6"
                         inputmode="numeric"
                         pattern="[0-9]*"
                         id="quantity-quick-view-{{ product.id }}"

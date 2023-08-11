@@ -242,7 +242,7 @@
                                                                             {{ 'products.product.quantity.label' | t }}
                                                                         </label>
                                                                         <a href="javascript:void(0)" data-minus-quantity-cart="" class="minus btn-quantity"></a>
-                                                                        <input class="form-input quantity cart-item-qty-input" name="quantity" id="upsell-update-{{ item.id }}" data-qtt-id1="quantity{{ item.id }}" value="{{ item.quantity }}" type="number"{% if item.variant.inventory_management != null and item.variant.inventory_quantity > 0 %} data-inventory-quantity="{{ item.variant.inventory_quantity }}"{% endif %} data-cart-quantity data-cart-quantity-id="{{ item.id }}" data-line="{{ item.key }}" />
+                                                                        <input class="form-input quantity cart-item-qty-input" name="quantity" id="upsell-update-{{ item.id }}" data-qtt-id1="quantity{{ item.id }}" min="6" value="{{ item.quantity }}" type="number"{% if item.variant.inventory_management != null and item.variant.inventory_quantity > 0 %} data-inventory-quantity="{{ item.variant.inventory_quantity }}"{% endif %} data-cart-quantity data-cart-quantity-id="{{ item.id }}" data-line="{{ item.key }}" />
                                                                         <a href="javascript:void(0)" data-plus-quantity-cart="" class="plus btn-quantity"></a>
                                                                     </cart-update-quantity>
                                                                 </div>

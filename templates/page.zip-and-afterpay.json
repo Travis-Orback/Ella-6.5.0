@@ -1,0 +1,110 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "8f5883af-439d-4c0a-bef3-a3450c4d72a1": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "79c533c9-2c50-4a64-b49f-bc51bdf420a4": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Zip FAQs",
+            "question_1": "What is the minimum purchase for Zip?",
+            "answer_1": "To use Zip, your order subtotal must be equal to or greater than $35.00 (after discounts applied).",
+            "question_2": "What will I need to use Zip?",
+            "answer_2": "In order to have an account with Zip, you must:\n<br>\n<ul>\n    <li>Live in the US<\/li>\n    <li>Be at least 18 years old<\/li>\n    <li>Have a valid and verifiable mobile number<\/li>\n    <li>Use a US credit or debit card to make a purchase<\/li>\n<\/ul>\n<br>\nEach transaction is assessed before it is approved and Zip does not approve every order and considers a variety of factors to determine approvals and spend limits.\n<br>\n<a href=\"https:\/\/help.us.zip.co\/hc\/en-us\/articles\/360020598712\">See Zip FAQs<\/a>",
+            "question_3": "Are there fees associated with Zip?",
+            "answer_3": "Yes, there are fees associated with the use of Zip. There is a $1 per-installment fee to use Zip, regardless of the size of your order. As long as your installments are paid on-time, there are no other fees to shop with Zip.\n<br><br>\nZip will charge a $7 late fee if your payment cannot be processed because your debit card account has insufficient funds or your credit card is no longer valid. If any installment goes past 7 days late, there will be a single additional fee per order of $7.",
+            "question_4": "If I return items from my Zip order, will I receive a refund?",
+            "answer_4": "Online returns from Fashion Nova are refunded via store credit in the form of a Fashion Nova gift card code. Refunds issued for returned items do not affect your Zip installments. When returning items by mail on a purchase made using Zip, you will still need to complete your payments to Zip as Fashion Nova processes returns and refunds separately.",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "792a4923-d155-4606-9dd0-4da999252661": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Afterpay FAQs",
+            "question_1": "What is Installments with Afterpay?",
+            "answer_1": "Installments with Afterpay is a service that allows you to make purchases now and pay for them in four payments made every 2 weeks without any interest.",
+            "question_2": "How do I use Installments with Afterpay?",
+            "answer_2": "Simply shop online and add items to your shopping bag and checkout as normal. At the checkout choose Installments with Afterpay as your payment method. First-time customers will need to register with Afterpay and provide payment details, as usual, returning customers simply log in to make their purchase. It’s that easy!\n<br><br>\nPlease note that all items in your shopping bag must be eligible for Installments with Afterpay. A minimum purchase amount may apply and you must meet additional eligibility requirements to qualify.",
+            "question_3": "Where can I use Installments with Afterpay?",
+            "answer_3": "Installments with Afterpay can only be applied to purchases made on fashionnova.com.",
+            "question_4": "Can I use Installments with Afterpay if I’m an international customer?",
+            "answer_4": "Afterpay is only offered to our customers who have a US billing address, US shipping address, a US Visa or Mastercard (credit or debit card), or American Express and a US mobile phone number. Customers with international billing addresses, shipping addresses, and\/or phone numbers will not be able to set up an account with Afterpay.",
+            "question_5": "How does the payment schedule work?",
+            "answer_5": "All customers are required to make their first payment at the time of purchase, with the remaining three payments deducted every two weeks from your chosen payment method. If you choose to make additional payments before your scheduled pay dates, you may do so through your Afterpay account.\n<br><br>\nYou can log in to your Afterpay account to view your payment schedule and make a payment before the due date if you choose to do so.",
+            "question_6": "When will my items be delivered if I use Installments with Afterpay?",
+            "answer_6": "Afterpay orders are delivered as per our standard shipping time frame after you complete your order online.",
+            "question_7": "What products are not eligible for purchase using Installments with Afterpay?",
+            "answer_7": "Afterpay is not available on purchases of gift cards. If you are purchasing gift cards along with Afterpay eligible products, you will need to place two separate orders.",
+            "question_8": "If I return items from my Afterpay order, will I receive a refund?",
+            "answer_8": "Online returns from Fashion Nova are refunded via store credit in the form of a Fashion Nova gift card. Refunds issued for returned items do not affect your Afterpay installments. When returning items by mail on a purchase made using Afterpay, you will still need to complete your payments to Afterpay as Fashion Nova processes returns and refunds separately.\n<br><br>\nIf you believe there is fault or concern with your Afterpay purchase payment, please contact Afterpay customer support at info@afterpay.com.",
+            "question_9": "What happens if I have a partial refund, and how does that affect my payments?",
+            "answer_9": "Afterpay will be notified once your refund is processed. Your payment plan will be automatically adjusted to reflect the new total order value starting with the last payment and working backward. In the case where a refund amount is larger than 25% of the total order, Afterpay will eliminate the fourth installment payment and apply the remaining amount to your earlier payments.",
+            "question_10": "Where can I find out more about Afterpay?",
+            "answer_10": "If you would like to know more about Afterpay, visit the Afterpay website for a comprehensive list of FAQs, Terms, Installment Agreement as well as Afterpay’s Privacy Policy.\n<br>\nIf you have any questions about your Afterpay account, please contact Afterpay directly via a web form found here."
+          }
+        }
+      },
+      "block_order": [
+        "79c533c9-2c50-4a64-b49f-bc51bdf420a4",
+        "792a4923-d155-4606-9dd0-4da999252661"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "container",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "show_faqs_filter": true,
+        "faqs_text": "Zip and Afterpay are installment payment platforms that let you pay for your Fashion Nova purchase over time in 4 easy installments using a credit or debit card every 2 weeks. Currently, Zip and Afterpay are only available for US customers.",
+        "faqs_message_heading": "",
+        "faqs_message_text": "",
+        "message_method_link_1": "",
+        "message_method_text_1": "",
+        "message_method_link_2": "",
+        "message_method_text_2": "",
+        "contact_content_text": "Unable to find satisfactory answers ?",
+        "contact_text": "Contact Support",
+        "contact_link": "shopify:\/\/pages\/contact-us",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#ef6454",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#ef6454",
+        "contact_color_bg_hover": "#ef6454",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "8f5883af-439d-4c0a-bef3-a3450c4d72a1"
+  ]
+}

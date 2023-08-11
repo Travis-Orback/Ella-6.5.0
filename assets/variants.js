@@ -783,6 +783,7 @@ class VariantSelects extends HTMLElement {
                 if (subTotal != 0 && stickyComparePrice.length && window.subtotal.show) {
                     let comparePrice = $('[data-sticky-add-to-cart] .money-compare-price').data('compare-price'),
                         qty = quantityInput.val();
+                        console.log("Minimum Order Quantity", qt)
                     comparePrice = qty * comparePrice;
                     comparePrice = Shopify.formatMoney(comparePrice, window.money_format);
                     comparePrice = extractContent(comparePrice);
@@ -870,7 +871,7 @@ class VariantSelects extends HTMLElement {
             value = inputValue
         }
 
-        if (value < 1 || isNaN(value)) value = 1 
+        if (value < 6 || isNaN(value)) value = 6
       
         if (quantityInput) {
           quantityInput.value = value
@@ -923,7 +924,7 @@ class QuantityInput extends HTMLElement {
         const addButton = document.getElementById(`product-form-${this.input.dataset.product}`)?.querySelector('[name="add"]');
 
         if(inputValue < 1) {
-            inputValue = 1;
+            inputValue = 6;
 
             this.input.value =  inputValue;
         }
@@ -939,8 +940,10 @@ class QuantityInput extends HTMLElement {
               const message = getInputMessage(maxValue)
               showWarning(message, 3000)
             }
-        } else if (inputValue > maxValue && saleOutStock && maxValue <= 0) {
-            this.input.value = inputValue;
+        } else if (inputValue > maxValue && saleOutStock && maxValue <= 0 && inputValue > 6) {
+            this.input.value = inputValue; 
+        } else if (inputValue < 6) {
+            this.input.value = 6;
         }
 
         if(window.subtotal.show) {
@@ -1016,7 +1019,7 @@ class QuantityInput extends HTMLElement {
         event.preventDefault();
         const previousValue = this.input.value;
         
-        event.target.name === 'plus' ? this.input.stepUp() : this.input.stepDown();
+        event.target.name === 'plus' ? this.input.stepUp(6) : this.input.stepDown(6);
         if (previousValue !== this.input.value) this.input.dispatchEvent(this.changeEvent);
     }
 

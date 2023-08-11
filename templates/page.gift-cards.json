@@ -1,0 +1,83 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "533e772e-923e-49b3-86af-f4275441154e": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "04329d2b-3dea-4f5d-a99d-9fc691be7faf": {
+          "type": "paragraph",
+          "settings": {
+            "title": "",
+            "question_1": "Can gift cards expire?",
+            "answer_1": "No, Gift Cards have no expiration date.\n<br><br>\nFashion Nova may issue a non-purchasable special promotional e-card. These cards will have an expiration date. In this case, you will be made aware of this expiration date upon issuance.",
+            "question_2": "Can I get a refund or exchange for my gift card?",
+            "answer_2": "Gift cards are final sale items and thus cannot be returned for refund or exchanged unless required by law.",
+            "question_3": "Can I apply a gift card to a past order?",
+            "answer_3": "If you forgot to apply your gift card to your online order, regrettably, we would not be able to apply the unused gift card to your order once it has been placed.",
+            "question_4": "How can I purchase a physical gift card?",
+            "answer_4": "Physical Gift Cards can only be redeemed in our retail locations throughout Southern California <a href=\"https:\/\/sngapparelinc.com\/pages\/store\">store locations.<\/a>",
+            "question_5": "My gift card was lost or stolen",
+            "answer_5": "You must safeguard your gift card for your own protection. It is within Fashion Nova's discretion that we may replace a gift card for the remaining balance at the time that a card is reported as damaged, lost, or stolen -- so long as we are provided with the original proof of purchase.",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "04329d2b-3dea-4f5d-a99d-9fc691be7faf"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "container",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "show_faqs_filter": true,
+        "faqs_text": "Want to purchase a gift card? You can purchase a gift card in convenient denominations that will be the perfect gift!\n<br><br>\nNo promotional discounts, coupons, or offers may be applied to purchase a Fashion Nova gift card. Gift Card funds are not transferable to an unauthorized third party or vendor. Gift cards are not transferable between our retail locations and online stores. We are unable to change the value of the gift card, once it has been purchased. We can not add or remove a gift card from an order after the order has been placed.\n<br>\n<br>\n<a href=\"https:\/\/sngapparelinc.com\/products\/gift-cards\">Purchase Gift Cards<\/a>\n<br><br>\nAlready have a gift card? You can check the balance and status of your gift card on our Check Gift Card Balance page",
+        "faqs_message_heading": "",
+        "faqs_message_text": "",
+        "message_method_link_1": "",
+        "message_method_text_1": "",
+        "message_method_link_2": "",
+        "message_method_text_2": "",
+        "contact_content_text": "Unable to find satisfactory answers ?",
+        "contact_text": "Contact Support",
+        "contact_link": "",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#ef6454",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#ef6454",
+        "contact_color_bg_hover": "#ef6454",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "533e772e-923e-49b3-86af-f4275441154e"
+  ]
+}

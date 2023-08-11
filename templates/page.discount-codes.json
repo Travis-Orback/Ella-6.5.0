@@ -1,0 +1,83 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "39506f30-e980-4a09-9b39-954780f47fc0": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "77065265-4eda-4797-87ea-670361cba653": {
+          "type": "paragraph",
+          "settings": {
+            "title": "",
+            "question_1": "Can I apply more than one discount code after I order?",
+            "answer_1": "Only ONE discount code can be applied per order and can not be changed after the order has been placed.\n<br><br>\nTIP: If the discount code applies to specific items in your order, you may want to consider applying that discount code to that order and place a second order to utilize a different discount code, but any applicable shipping fees will apply if opting to do this.",
+            "question_2": "Why isn't my discount code being accepted",
+            "answer_2": "Discount codes are only available for a limited time. If the discount code is no longer available our system will not allow you to add it to your order.Discount codes may also not apply if the items in your cart do not match the criteria of the discount code.",
+            "question_3": "Can I request a discount code if I contact customer service?",
+            "answer_3": "All the discount codes available to customers are found on our website. Customer Service does not have any discount codes that they can give to customers.",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "77065265-4eda-4797-87ea-670361cba653"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "container",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "show_faqs_filter": true,
+        "faqs_text": "Discount codes are sales specific codes that can apply to your order when you are checking out. If there is a site-wide sale, applying discount codes may not be allowed unless otherwise indicated.\n<br>\n<br>\nWe cannot change or add a discount code after the order has been placed.",
+        "faqs_message_heading": "",
+        "faqs_message_text": "",
+        "message_method_link_1": "",
+        "message_method_text_1": "",
+        "message_method_link_2": "",
+        "message_method_text_2": "",
+        "contact_content_text": "Unable to find satisfactory answers ?",
+        "contact_text": "Contact Support",
+        "contact_link": "",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#ef6454",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#ef6454",
+        "contact_color_bg_hover": "#ef6454",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "39506f30-e980-4a09-9b39-954780f47fc0"
+  ]
+}

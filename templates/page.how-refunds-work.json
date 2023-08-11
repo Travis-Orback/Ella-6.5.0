@@ -1,0 +1,83 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "4fd5da1e-bd18-4d95-8629-5b4b33e284ee": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "93012ed1-94d4-41f9-a77b-74745393633a": {
+          "type": "paragraph",
+          "settings": {
+            "title": "",
+            "question_1": "Do gift cards expire?",
+            "answer_1": "<p>No, Fashion Nova gift cards never expire and can be treated just like cash on our online store!<\/p>",
+            "question_2": "Why did I receive a partial refund after placing my order?",
+            "answer_2": "<p>One or more of your items may have sold out since your order was processed.<\/p>",
+            "question_3": "What happens if I use a gift card to pay for all or part of my order and some items were out of stock?",
+            "answer_3": "<p>The amount refunded will go back to the gift card that was used, any remaining balance will be returned to your other form of payment.<\/p>",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "93012ed1-94d4-41f9-a77b-74745393633a"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "container",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "show_faqs_filter": true,
+        "faqs_text": "Fashion Nova issues refunds to the original form of payment used on an order in the event that your order:\n<ul>\n<li>\nIs canceled by Fashion Nova<\/li>\n<li>One or more of your items sold out since your order was processed<\/li>\n<li>Item(s) proved to be received damaged, defective, or incorrect<\/li>\n<\/ul>\nFashion Nova will take 2-5 business days to clear your refund. Depending on your financial institution, the refund amount may take up to 10 business days to post to your account.\n\nIf you used a gift card to purchase your item(s), your funds will be issued back to your gift card immediately.",
+        "faqs_message_heading": "",
+        "faqs_message_text": "",
+        "message_method_link_1": "",
+        "message_method_text_1": "",
+        "message_method_link_2": "",
+        "message_method_text_2": "",
+        "contact_content_text": "Unable to find satisfactory answers ?",
+        "contact_text": "Contact Support",
+        "contact_link": "shopify:\/\/pages\/contact-us",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#ef6454",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#ef6454",
+        "contact_color_bg_hover": "#ef6454",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4fd5da1e-bd18-4d95-8629-5b4b33e284ee"
+  ]
+}

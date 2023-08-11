@@ -12,3 +12,13 @@
 form#ContactFooter .form--check {
     display: none;
 }
+footer.footer.footer-5 .footer__content-top {
+    background-color: #fff;
+}
+footer.footer.footer-5 h2.footer-block__heading,
+footer.footer.footer-5 a.link.link-underline.list-menu__item--link {
+    color: black;
+}
+.quantity_selector {
+    margin-bottom: 15px;
+}

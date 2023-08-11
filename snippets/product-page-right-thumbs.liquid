@@ -45,7 +45,7 @@
     assign subtotal = 0
     if show_subtotal
         assign show_subtotal_text = true
-        assign subtotal = current_variant.price | money
+        assign subtotal = current_variant.price | times: 6 | money
     endif
     assign show_sticky_add_to_cart = section.settings.show_sticky_add_to_cart
     assign sticky_atc_layout = section.settings.sticky_atc_layout

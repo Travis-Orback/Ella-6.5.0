@@ -527,13 +527,17 @@ class UpdateQuantity extends HTMLElement {
         const value = Number(el_input.value);
         const inStockNumber = Number(el_input.dataset.inventoryQuantity);
         if (event.target.classList.contains('plus')) {
-            var newVal = value + 1;
+            var newVal = value + 6;
         } else {
-            var newVal = value - 1;
+            if (value > 12) {
+                var newVal = value - 6;
+            } else {
+                var newVal = 6;
+            }            
         }
 
         if (newVal < 0 ) {
-            var newVal = 1
+            var newVal = 6;
         }
 
         if (newVal <= inStockNumber) {
@@ -582,11 +586,11 @@ class UpdateQuantityQuickShop extends HTMLElement {
         const buttonAdd = target.closest('[data-quickshop]').querySelector('[data-btn-addtocart]');
         let newVal;
 
-        if (target.matches('.plus')) newVal = value + 1;
-        else if (target.matches('.minus')) newVal = value - 1;
+        if (target.matches('.plus')) newVal = value + 6;
+        else if (target.matches('.minus') && value > 12) newVal = value - 6;
         else newVal = value;
 
-        if (newVal <= 0) newVal = 1;
+        if (newVal <= 0) newVal = 6;
 
         if (newVal > inStockNumber && !buttonAdd.matches('.button--pre-untrack')) {
             const message = getInputMessage(inStockNumber);

@@ -1,0 +1,83 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "6c317117-aaa3-47da-be28-c21798003af6": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "9e812ede-c1a1-4b31-9dc2-00383ad9b550": {
+          "type": "paragraph",
+          "settings": {
+            "title": "",
+            "question_1": "My order still says it is waiting to be shipped",
+            "answer_1": "There are two common reasons why an order’s tracking says that it has not been shipped.\n<br>\n<ul>\n    <li>The order may have been shipped, but due to the destination distance of the shipment, the first scan might not occur for a couple of days after you’ve been notified that the package has shipped and your initial issuance of the tracking number.\n    <\/li>\n    <li>The order may have required additional processing time to complete the order, please refer to our Shipping Time Frames for more information on processing<\/li>\n<\/ul>",
+            "question_2": "My order still says it is In Transit for a number of days",
+            "answer_2": "Orders will remain in “In Transit” status until it reaches the next shipping hub. Sometimes, due to circumstances that are out of our control, packages may not have an updated scan for a number of days. If your package has remained “In Transit” for 7+ days since the most recent tracking update, please reach out to us to further investigate your issue. You can check the status of your order using our <a href=\"https:\/\/sngapparelinc.com\/apps\/17TRACK\">Track Order<\/a> page.",
+            "question_3": "International order stuck, held, or verification required",
+            "answer_3": "When making an international order, the destination country may require you to verify information about the order and the recipient. This is the most common reason that your order is not moving or held at customs\n<br><br>\nThe customer may be required to provide the shipper and\/or country with an invoice\/proof of purchase and\/or ID verification. The “Fashion Nova Order Confirmation Email”, should be able to be used as your invoice\/proof of purchase.\n<br><br>\nEach country's shipping policies are subject to change and Fashion Nova would not be able to provide specific information on your country's policies or processes.\n<br><br>\nIf Fashion Nova notices that a package is not moving, Fashion Nova may attempt to proactively resolve these issues.",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "9e812ede-c1a1-4b31-9dc2-00383ad9b550"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "container",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "show_faqs_filter": true,
+        "faqs_text": "Due to issues with carriers, you may see some delays in tracking updates on your order.",
+        "faqs_message_heading": "",
+        "faqs_message_text": "",
+        "message_method_link_1": "",
+        "message_method_text_1": "",
+        "message_method_link_2": "",
+        "message_method_text_2": "",
+        "contact_content_text": "Unable to find satisfactory answers ?",
+        "contact_text": "Contact Support",
+        "contact_link": "",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#ef6454",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#ef6454",
+        "contact_color_bg_hover": "#ef6454",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "6c317117-aaa3-47da-be28-c21798003af6"
+  ]
+}

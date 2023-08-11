@@ -26,7 +26,7 @@
         "btn_bg_color_hover_gradient": "",
         "btn_max_width": 205,
         "btn_link": "",
-        "block_content": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3153.0985086794008!2d-122.40480278434755!3d37.7877311191863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808814a1b309%3A0x616fef8687897e9!2s685%20Market%20St%2C%20San%20Francisco%2C%20CA%2094105%2C%20Hoa%20K%E1%BB%B3!5e0!3m2!1svi!2s!4v1658982243728!5m2!1svi!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>"
+        "block_content": "<div style=\"width: 100%\"><iframe width=\"100%\" height=\"600\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"https:\/\/maps.google.com\/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=727%20E%20Pico%20Blvd,%20Unit%207%20&amp;%208,%20Los%20Angeles%20California%2090021,%20United%20States+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed\"><a href=\"https:\/\/www.maps.ie\/population\/\">Population calculator map<\/a><\/iframe><\/div>"
       }
     },
     "main": {

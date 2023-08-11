@@ -1,0 +1,83 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "f323a391-0b75-424e-92aa-b1b12a34890c": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "9b9742a8-729c-457c-9782-8d158705c483": {
+          "type": "paragraph",
+          "settings": {
+            "title": "",
+            "question_1": "Are we able to make changes to your order once they have been placed?",
+            "answer_1": "<p>No. To ensure that your package is properly delivered, make sure that your address is entered correctly and includes all relevant information. The use of correct abbreviations, street numbers, building or apartment numbers, and route information (if applicable) are critical to ensuring delivery.<\/p>",
+            "question_2": "",
+            "answer_2": "",
+            "question_3": "",
+            "answer_3": "",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "9b9742a8-729c-457c-9782-8d158705c483"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "container",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "show_faqs_filter": true,
+        "faqs_text": "Returned to sender or refused packages will be restocked and you will be issued store credit in the form of a gift card minus the initial shipping charge.\n<br>\n<br>\nAn order may be returned to sender for one of the following reasons:\n<br>\n<br>\n<ul>\n<li>\nAn address is invalid or there is missing information,<\/li>\n<li>The carrier is unable to deliver your package, or<\/li>\n<li>The order is refused by the customer at time of delivery.<\/li>\n<\/ul>\n<br>\nWe do not take responsibility for lost, misplaced, or incorrectly delivered shipments if the address information provided is incorrect at the time of purchase.",
+        "faqs_message_heading": "",
+        "faqs_message_text": "",
+        "message_method_link_1": "",
+        "message_method_text_1": "",
+        "message_method_link_2": "",
+        "message_method_text_2": "",
+        "contact_content_text": "Unable to find satisfactory answers ?",
+        "contact_text": "Contact Support",
+        "contact_link": "shopify:\/\/pages\/contact-us",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#ef6454",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#ef6454",
+        "contact_color_bg_hover": "#ef6454",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "f323a391-0b75-424e-92aa-b1b12a34890c"
+  ]
+}

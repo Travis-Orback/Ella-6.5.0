@@ -99,7 +99,7 @@
             "show_wishlist": true,
             "wishlist_color": "#232323",
             "show_cart": true,
-            "cart_color": "#232323",
+            "cart_color": "#000000",
             "cart_color_item": "#ffffff",
             "cart_bg_item": "#000000",
             "cart_item_font_size": 12,
@@ -304,8 +304,8 @@
             "top_message_text": "MAGIC MONTH 10% discount applied at checkout - Ends August 31st Midnight PST",
             "annou_countdown": "Sep 01, 2023 00:00:00",
             "color_countdown_text": "#000000",
-            "border_color_countdown": "#FFFFFF",
-            "bg_color_countdown": "#FFFFFF"
+            "border_color_countdown": "#ffffff",
+            "bg_color_countdown": "#ffffff"
           }
         }
       },
@@ -317,7 +317,7 @@
         "layout": "slider",
         "enable_close": false,
         "color_text": "#000000",
-        "bg_color_text": "#FFFFFF",
+        "bg_color_text": "#ffffff",
         "bg_color_text_gradient": "",
         "font_size_text": 16,
         "font_style_text": "normal",

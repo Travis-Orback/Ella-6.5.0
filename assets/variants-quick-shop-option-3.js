@@ -516,7 +516,7 @@ class VariantQuickShopSelects extends HTMLElement {
             value = inputValue
         }
 
-        if (value < 1 || isNaN(value)) value = 1 
+        if (value < 6 || isNaN(value)) value = 6
 
         quantityInput.value = value
 

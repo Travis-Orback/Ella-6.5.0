@@ -1,0 +1,83 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "9f5ab5c6-dec3-447f-9508-e307140044ad": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "25c0c79b-a3d9-4220-87bb-ec9cc3d3950e": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Presale",
+            "question_1": "Question",
+            "answer_1": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.<\/p>",
+            "question_2": "Question",
+            "answer_2": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.<\/p>",
+            "question_3": "Question",
+            "answer_3": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.<\/p>",
+            "question_4": "Question",
+            "answer_4": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.<\/p>",
+            "question_5": "Question",
+            "answer_5": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.<\/p>",
+            "question_6": "Question",
+            "answer_6": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.<\/p>",
+            "question_7": "Question",
+            "answer_7": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.<\/p>",
+            "question_8": "Question",
+            "answer_8": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.<\/p>",
+            "question_9": "Question",
+            "answer_9": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.<\/p>",
+            "question_10": "Question",
+            "answer_10": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "25c0c79b-a3d9-4220-87bb-ec9cc3d3950e"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "container",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "show_faqs_filter": true,
+        "faqs_text": "We know you want your order fast so as soon as it is placed, we are on it! \n<br>\nRegrettably, this means that we cannot cancel or make changes to your order including, but not limited to:\n<br>\n<ul>\n    <li>Canceling your order or specific items\n    <\/li>\n    <li>Changing your billing or shipping address\n    <\/li>\n    <li>Changing payment method\n    <\/li>\n    <li>Changing shipping method\n    <\/li>\n    <li>Changing color\/size of items(s)\n    <\/li>\n    <li>Addition or removal of item(s)\n    <\/li>\n    <li>Changing or adding a discount code\n    <\/li>\n    <li>Addition or removal of a gift card<\/li>\n<\/ul>\n<br>\nFor whatever reason if you would no longer wish to keep your order, you are able to return your order after it has been delivered.\n<br><br>\nIn case of a return, please click on the button below to review our return policy and make a return.\n<br><br>\n<a href=\"https:\/\/sngapparelinc.com\/pages\/our-return-policy-and-process\">Return Policy<\/a>",
+        "faqs_message_heading": "Need Help?",
+        "faqs_message_text": "",
+        "message_method_link_1": "",
+        "message_method_text_1": "",
+        "message_method_link_2": "",
+        "message_method_text_2": "",
+        "contact_content_text": "Unable to find satisfactory answers ?",
+        "contact_text": "Contact Support",
+        "contact_link": "",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#ef6454",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#ef6454",
+        "contact_color_bg_hover": "#ef6454",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "9f5ab5c6-dec3-447f-9508-e307140044ad"
+  ]
+}

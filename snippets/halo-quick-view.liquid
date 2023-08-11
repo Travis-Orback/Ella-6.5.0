@@ -48,7 +48,7 @@
     assign subtotal = 0
     if show_quick_view_subtotal and show_quick_view_qty
         assign show_subtotal = true
-        assign subtotal = current_variant.price | money
+        assign subtotal = current_variant.price | times: 6 | money
     endif
     assign show_dynamic_checkout = settings.show_dynamic_checkout
     assign show_quick_view_customer_viewing = settings.show_quick_view_customer_viewing
@@ -647,7 +647,7 @@
                                     <button type="button" name="minus" class="minus btn-quantity">
                                         <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
                                     </button>
-                                    <input class="form-input quantity__input quantity" type="number" name="quantity" min="1" value="1" inputmode="numeric" pattern="[0-9]*" id="quantity-{{ product.id }}-2" data-product="{{ product.id }}" data-price="{{ current_variant.price }}" data-inventory-quantity="{{ current_variant.inventory_quantity }}">
+                                    <input class="form-input quantity__input quantity" type="number" name="quantity" min="6" value="6" inputmode="numeric" pattern="[0-9]*" id="quantity-{{ product.id }}-2" data-product="{{ product.id }}" data-price="{{ current_variant.price }}" data-inventory-quantity="{{ current_variant.inventory_quantity }}">
                                     <button type="button" name="plus" class="plus btn-quantity">
                                         <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
                                     </button>
@@ -655,6 +655,9 @@
                             </quantity-quick-view-input>
                         </div>
                     {%- endif -%}
+                    {% if current_variant.quantity > 6 %}
+                        {{ variant.price | times: 6 | money }}
+                    {% endif %}
                     {%- if show_subtotal -%}
                         <div class="productView-subtotal">
                             <span class="text">{{ 'sections.cart.subtotal' | t | append: ': ' }}</span>
@@ -779,7 +782,7 @@
                                         <button type="button" name="minus" class="minus btn-quantity">
                                             <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
                                         </button>
-                                        <input class="form-input quantity__input quantity" type="number" name="quantity" min="1" value="1" inputmode="numeric" pattern="[0-9]*" id="quantity-{{ product.id }}" data-product="{{ product.id }}" data-price="{{ current_variant.price }}" data-inventory-quantity="{{ current_variant.inventory_quantity }}">
+                                        <input class="form-input quantity__input quantity" type="number" name="quantity" min="6" value="6" inputmode="numeric" pattern="[0-9]*" id="quantity-{{ product.id }}" data-product="{{ product.id }}" data-price="{{ current_variant.price }}" data-inventory-quantity="{{ current_variant.inventory_quantity }}">
                                         <button type="button" name="plus" class="plus btn-quantity">
                                             <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
                                         </button>

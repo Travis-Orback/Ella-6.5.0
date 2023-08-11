@@ -45,7 +45,7 @@
     assign subtotal = 0
     if show_subtotal
         assign show_subtotal_text = true
-        assign subtotal = current_variant.price | money
+        assign subtotal = current_variant.price | times: 6 | money
     endif
     assign show_sticky_add_to_cart = section.settings.show_sticky_add_to_cart
     assign sticky_atc_layout = section.settings.sticky_atc_layout
@@ -1035,6 +1035,7 @@
                                                             quantity_stt: 2
                                                         %}
                                                     </div>
+                                                        <span>Pack Price: </span>{{ current_variant.price | times: 6 | money }}<span>/pack</span>
                                                     {%- if show_subtotal and subtotal_style == '1' -%}
                                                         <div class="productView-subtotal">
                                                             <span class="text">{{ 'sections.cart.subtotal' | t | append: ': ' }}</span>

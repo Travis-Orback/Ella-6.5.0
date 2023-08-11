@@ -1,0 +1,83 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "6431d62d-331b-4964-bff3-0dcbde140763": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "37bdc48e-9366-44fc-a3ec-30de88cba6a2": {
+          "type": "paragraph",
+          "settings": {
+            "title": "",
+            "question_1": "Didn't receive your gift card?",
+            "answer_1": "<p>Please make sure to check all folders including Spam on the email address associated with your order. If you lost access to your email you’ll need to contact us below with your order number, full name, and billing address.<\/p>",
+            "question_2": "Returned multiple orders in 1 package?",
+            "answer_2": "<p>Please do not group returns like this in the future as it can cause major delays and incorrect crediting.\n\nIt is up to the returns processing associate to locate your items manually for any order returned that was not done through our Returns Portal. In the case they missed an item please contact us and include the order number and item(s) missed.<\/p>",
+            "question_3": "Received less credit than you expected?",
+            "answer_3": "<p>Upon receipt of your return our returns processing team inspects all garments for stains, holes, defects, and wear. If an item is identified as damaged, a 50% restocking fee will be reduced from your return amount.<\/p>",
+            "question_4": "Did you order using a BOGO (Buy One Get One) sale?",
+            "answer_4": "<p>Here is how we calculate your credit. The easiest way to do this is to give you an example...\n\nLet's say you redeemed a BOGO for 2 items.\n\nOne was a $15 item and the other was a $10 item. The $10 item in this case would be the item you got for free. But how we calculate it, is you got the $15 item for $9 and the $10 for $6 as the $10 discount is prorated across the 2 items.\n\nIf you return the $15 item you will get $9 in credit.\nIf you return the $10 item you will get $6 in credit.\n\nIn every case, we prorate the discount across all applicable items in your specific order. Don't worry, we'll do the math for you.<\/p>",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "37bdc48e-9366-44fc-a3ec-30de88cba6a2"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "container",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "show_faqs_filter": true,
+        "faqs_text": "To ensure fast and accurate processing please use the Returns Portal before sending back your return. Orders sent without following this process will be delayed and may cause crediting issues.<br data-mce-fragment=\"1\">All returns will be refunded via gift card<br data-mce-fragment=\"1\"><br data-mce-fragment=\"1\">Due to the nature of our fast limited supply sourcing we do not offer refunds to the original form of payment.",
+        "faqs_message_heading": "",
+        "faqs_message_text": "",
+        "message_method_link_1": "",
+        "message_method_text_1": "",
+        "message_method_link_2": "",
+        "message_method_text_2": "",
+        "contact_content_text": "Unable to find satisfactory answers ?",
+        "contact_text": "Contact Support",
+        "contact_link": "",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#ef6454",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#ef6454",
+        "contact_color_bg_hover": "#ef6454",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "6431d62d-331b-4964-bff3-0dcbde140763"
+  ]
+}
