@@ -53,16 +53,23 @@ Usage:
       </dt>
       {%- endcomment -%}
       <dd class="price__last">
+        <div>{{ product.selected_or_first_available_variant.sku }}</div>
         <span class="price-item price-item--regular">{{ money_price }}</span>
+        <span style="font-weight: bold; font-size: 16px;">/piece</span>
+
+        <div style="font-weight: bold;">{{ target.price | times: 6 | money }} /pack</div>
+        {% comment %}
         {% if template contains "collection" %}
-          <span style="font-weight: bold; font-size: 16px;">/piece</span>
+        <span style="font-weight: bold; font-size: 16px;">/piece</span>
         {% endif %}
         {% if template contains "product" %}
-          <span style="font-weight: bold; font-size: 16px;">/piece</span>
+        <span style="font-weight: bold; font-size: 16px;">/piece</span>
         {% endif %}
         {% if template contains "collection" %}
-          <div style="font-weight: bold;">{{ target.price | times: 6 | money }}/pack</div>
+        <div style="font-weight: bold;">{{ target.price | times: 6 | money }} /pack</div>
         {% endif %}
+        {% endcomment %}
+
       </dd>
     </div>
     <div class="price__sale">
@@ -73,15 +80,9 @@ Usage:
       {%- endcomment -%}
       <dd class="price__compare">
         <s class="price-item price-item--regular">{{ compare_at_price | money }}</s>
-        {% if template contains "collection" %}
-          <span style="font-weight: bold; font-size: 16px;">/piece</span>
-        {% endif %}
-        {% if template contains "product" %}
-          <span style="font-weight: bold; font-size: 16px;">/piece</span>
-        {% endif %}
-        {% if template contains "collection" %}
-          <div style="font-weight: bold;">{{ target.price | times: 6 | money }}/pack</div>
-        {% endif %}
+        <span style="font-weight: bold; font-size: 16px;">/piece</span>
+
+        <div style="font-weight: bold;">{{ target.price | times: 6 | money }} /pack</div>
       </dd>
       {%- comment -%}
       <dt>

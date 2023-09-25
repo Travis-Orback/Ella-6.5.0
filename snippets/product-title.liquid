@@ -4,31 +4,35 @@
     assign color_title = block.settings.color_title
 -%}
 {%- if check_show_share == '3' -%}
-    <div class="halo-share-3">
-        <h1 class="productView-title" 
-            style="--color-title: {{ color_title }};
-            --fontsize-text: {{ fontsize_text | append: 'px' }};
-            --fontsize-mb-text: {{ fontsize_text_mb | append: 'px' }};"
-        >
-            <span>
-                {{ product.title | escape }}
-            </span>
-        </h1>
-        {% render 'halo-share',
-            product: product,
-            share_product_type: share_product_type,
-            share_product_script: share_product_script,
-            share_layout: check_show_share
-        %}
-    </div>
-{%- else -%}
-    <h1 class="productView-title" 
-        style="--color-title: {{ color_title }};
-        --fontsize-text: {{ fontsize_text | append: 'px' }};
-        --fontsize-mb-text: {{ fontsize_text_mb | append: 'px' }};"
-    >
-        <span>
-            {{ product.title | escape }}
-        </span>
+  <div class="halo-share-3">
+    <h1 class="productView-title" style="--color-title: {{ color_title }};
+                            --fontsize-text: {{ fontsize_text | append: 'px' }};
+                            --fontsize-mb-text: {{ fontsize_text_mb | append: 'px' }};">
+      <span>
+        {{ product.title | escape }}
+      </span>
     </h1>
+    {% render 'halo-share' 
+     , product: product,
+     share_product_type: share_product_type,
+     share_product_script: share_product_script,
+     share_layout: check_show_share %}
+  </div>
+{%- else -%}
+  <h1 class="productView-title" style="--color-title: {{ color_title }};
+                    --fontsize-text: {{ fontsize_text | append: 'px' }};
+                    --fontsize-mb-text: {{ fontsize_text_mb | append: 'px' }};">
+    <span>
+      {{ product.title | escape }}
+    </span>
+  </h1>
 {%- endif -%}
+<p>
+  Item: {{ product.selected_or_first_available_variant.sku }}
+</p>
+<p>
+  Size: {{ product.metafields.custom.size }}
+</p>
+<p>
+  Pack: {{ product.metafields.custom.pack }}
+</p>

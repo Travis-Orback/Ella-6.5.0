@@ -99,7 +99,7 @@
       {% unless subtext_before_heading %}
         <div class="footer-block__subheading rte">{{ subtext | default: ' ' }}</div>
       {% endunless %}
-      {% render 'block-newsletter-footer', block: block %}
+      {% render 'block-newsletter-footer-klaviyo', block: block %}
     </div>
   </div>
   {%- if show_social and swap_social_position != true -%}

@@ -1,0 +1,78 @@
+.usf-sr-paging .pagination__item.pagination__item--current::after,
+.usf-horz-layout #main-collection-filters,
+.usf-has-no-facets #main-collection-filters,
+.usf-mobile .toolbar-sidebar,
+body:not(.usf-has-filter-drawer) #main-collection-filters,
+.usf-has-no-facets #halo-sidebar,
+.usf-horz-layout #halo-sidebar{
+    display: none !important;
+}
+
+.usf-has-filter-drawer .usf-facets,
+.usf-has-filter-drawer .usf-sr-container,
+.usf-sr-empty,
+body:not(.usf-mobile) .usf-sr-config .toolbar,
+.usf-has-no-facets .container .page-content,
+.usf-horz-layout .container .page-content{
+	width: 100%
+}
+
+.usf-has-filter-drawer .usf-sr-container,
+.usf-has-filter-drawer .usf-sr-container {
+	padding-left: 0;
+}
+.usf-has-filter-drawer #main-collection-filters{
+    display: flex;
+}
+.usf-facets *:empty,
+.usf-popup *:empty {
+    display: unset;
+}
+
+.usf-sr-config .toolbar{
+    border: none;
+    padding: 0;
+}
+.usf-card-action{
+    height: 70px;
+}
+
+body:not(.usf-collections-page) .usf-sr-inputbox {
+	display: none;
+}
+.usf-sr-empty *{
+    font-size: initial;
+}
+.usf-sr-config .toolbar .toolbar-viewAs {
+    margin-bottom: 0;
+}
+.usf-sr-config .toolbar-colLeft{
+    width: 100% !important;
+    justify-content: flex-start !important;
+}
+.usf-colorfilter{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.usf-color-name{  
+    font-size: 13px;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.usfswatch {
+    width: 65px; 
+    cursor: pointer;
+    padding-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.usfswatch:hover {
+    background-color: #e9e9e936;
+}
+.usf-facet-values--Swatch .usfswatch button{
+    min-width: 35px;
+}

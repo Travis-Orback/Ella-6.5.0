@@ -13,7 +13,7 @@
         "breadcrumb_gradient_mb": "",
         "show_page_title": true,
         "page_title_alignment": "left",
-        "container": "default",
+        "container": "container",
         "mg_top_desktop": 0,
         "mg_top_tablet": 0,
         "mg_top_mobile": 0,
@@ -29,7 +29,7 @@
         "8472dad8-3289-4746-8b7f-e6ebe3175dd5": {
           "type": "lookbook",
           "settings": {
-            "show_image": true,
+            "show_image": false,
             "link": "",
             "show_title": true,
             "page_title_alignment": "left",
@@ -81,7 +81,7 @@
         "sidebar_heading_text_transform": "uppercase",
         "show_filter": true,
         "filter_swatch": "Color",
-        "filter_swatch_type": "png",
+        "filter_swatch_type": "color",
         "filter_rectangle": "Size",
         "filter_display_type": "show-more",
         "max_item_per_filter": 10,
@@ -94,13 +94,13 @@
         "layout": "4",
         "show_infinite_scrolling": "pagination",
         "show_banner": false,
-        "show_banner_1": true,
+        "show_banner_1": false,
         "banner_position_1": "4",
         "link_banner_1": "",
-        "show_banner_2": true,
+        "show_banner_2": false,
         "banner_position_2": "5",
         "link_banner_2": "",
-        "show_banner_3": true,
+        "show_banner_3": false,
         "banner_position_3": "12",
         "link_banner_3": ""
       }

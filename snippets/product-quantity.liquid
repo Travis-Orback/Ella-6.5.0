@@ -1,3 +1,5 @@
+{% assign minimum_order_amount = 10000 | divided_by: current_variant.price | round | plus: 1 %}
+
 {%- if qty_style == '1' -%}
   <quantity-input class="productView-quantity quantity__group quantity__group--{{ quantity_stt }} quantity__style--{{ qty_style }} clearfix{% if check_hidden %} hidden{% endif %}">
     <label class="form-label quantity__label" for="quantity-{{ product.id }}{%- if quantity_stt > 1 -%}-{{ quantity_stt }}{%- endif -%}">

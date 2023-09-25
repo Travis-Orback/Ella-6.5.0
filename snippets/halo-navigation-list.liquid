@@ -1,5 +1,5 @@
 <ul class="{{ listClass }} text-{{alignment}}" role="list">
-    {%- liquid
+  {%- liquid
         if search.terms != blank and template.suffix == 'ajax_mega_menu'
             assign hide_menu_load = false
             assign menu = linklists[search.terms].links
@@ -20,8 +20,8 @@
             endif
         endif
     -%}
-    {%- for link in menu -%}
-        {%- liquid
+  {%- for link in menu -%}
+    {%- liquid
             assign sale_item_lv1 = block.settings.sale_item_1 | split: "," | strip | downcase | handle
             assign sale_item_lv2 = block.settings.sale_item_2 | split: "," | strip | downcase | handle
             assign sale_item_lv3 = block.settings.sale_item_3 | split: "," | strip | downcase | handle
@@ -55,6 +55,7 @@
                         if show_banner_1
                             assign banner_1 = menuItem.settings.banner_1
                             assign banner_url_1 = menuItem.settings.banner_url_1
+                            assign banner_url_title_1 = menuItem.settings.banner_url_title_1
                         endif
                         assign show_banner_2 = menuItem.settings.show_banner_2
                         if show_banner_2
@@ -104,82 +105,80 @@
                 endcase
             endfor
         -%}
-        {%- if check_menu -%}
-            {% render 'halo-megamenu'
-                container: container,
-                size_container: size_container,
-                link: link,
-                title: title,
-                sale_item_lv1: sale_item_lv1,
-                sale_item_lv2: sale_item_lv2,
-                sale_item_lv3: sale_item_lv3,
-                show_label_blink: show_label_blink,
-                new_label_1: new_label_1,
-                new_label_2: new_label_2,
-                new_label_3: new_label_3,
-                sale_label_1: sale_label_1,
-                sale_label_2: sale_label_2,
-                sale_label_3: sale_label_3,
-                hot_label_1: hot_label_1,
-                hot_label_2: hot_label_2,
-                hot_label_3: hot_label_3,
-                block_style: block_style,
-                column: column,
-                show_banner_1: show_banner_1,
-                banner_1: banner_1,
-                banner_url_1: banner_url_1,
-                show_banner_2: show_banner_2,
-                banner_2: banner_2,
-                banner_url_2: banner_url_2,
-                show_banner_3: show_banner_3,
-                banner_3: banner_3,
-                banner_url_3: banner_url_3,
-                show_banner_4: show_banner_4,
-                banner_4: banner_4,
-                banner_url_4: banner_url_4,
-                bg_mega_menu_bottom: bg_mega_menu_bottom,
-                az_brand_link_text_color: az_brand_link_text_color,
-                show_banner_5: show_banner_5,
-                banner_5: banner_5,
-                banner_url_5: banner_url_5,
-                show_az_brand: show_az_brand,
-                az_brand_title: az_brand_title,
-                az_brand_link_text: az_brand_link_text,
-                az_brand_url: az_brand_url,
-                show_product: show_product,
-                product_title: product_title,
-                product_collection: product_collection,
-                product: product,
-                product_limit: product_limit,
-                product_per_row: product_per_row,
-                menu_text_left: menu_text_left,
-                menu_text_left_sale: menu_text_left_sale,
-                collection_product: product_collection,
-                product_limit: product_limit,
-                mega_tyle: mega_tyle,
-                alignment: alignment
-
-            %}
-        {%- else -%}
-            {% render 'halo-dropdownmenu'
-                link: link,
-                title: title,
-                sale_item_lv1: sale_item_lv1,
-                sale_item_lv2: sale_item_lv2,
-                sale_item_lv3: sale_item_lv3,
-                show_label_blink: show_label_blink,
-                new_label_1: new_label_1,
-                new_label_2: new_label_2,
-                new_label_3: new_label_3,
-                sale_label_1: sale_label_1,
-                sale_label_2: sale_label_2,
-                sale_label_3: sale_label_3,
-                hot_label_1: hot_label_1,
-                hot_label_2: hot_label_2,
-                hot_label_3: hot_label_3,
-                dropdown_alignment: dropdown_alignment,
-                alignment: alignment
-            %}
-        {%- endif -%}
-    {%- endfor -%}
+    {%- if check_menu -%}
+      {% render 'halo-megamenu'
+       container: container,
+       size_container: size_container,
+       link: link,
+       title: title,
+       sale_item_lv1: sale_item_lv1,
+       sale_item_lv2: sale_item_lv2,
+       sale_item_lv3: sale_item_lv3,
+       show_label_blink: show_label_blink,
+       new_label_1: new_label_1,
+       new_label_2: new_label_2,
+       new_label_3: new_label_3,
+       sale_label_1: sale_label_1,
+       sale_label_2: sale_label_2,
+       sale_label_3: sale_label_3,
+       hot_label_1: hot_label_1,
+       hot_label_2: hot_label_2,
+       hot_label_3: hot_label_3,
+       block_style: block_style,
+       column: column,
+       show_banner_1: show_banner_1,
+       banner_1: banner_1,
+       banner_url_1: banner_url_1,
+       banner_url_title_1: banner_url_title_1,
+       show_banner_2: show_banner_2,
+       banner_2: banner_2,
+       banner_url_2: banner_url_2,
+       show_banner_3: show_banner_3,
+       banner_3: banner_3,
+       banner_url_3: banner_url_3,
+       show_banner_4: show_banner_4,
+       banner_4: banner_4,
+       banner_url_4: banner_url_4,
+       bg_mega_menu_bottom: bg_mega_menu_bottom,
+       az_brand_link_text_color: az_brand_link_text_color,
+       show_banner_5: show_banner_5,
+       banner_5: banner_5,
+       banner_url_5: banner_url_5,
+       show_az_brand: show_az_brand,
+       az_brand_title: az_brand_title,
+       az_brand_link_text: az_brand_link_text,
+       az_brand_url: az_brand_url,
+       show_product: show_product,
+       product_title: product_title,
+       product_collection: product_collection,
+       product: product,
+       product_limit: product_limit,
+       product_per_row: product_per_row,
+       menu_text_left: menu_text_left,
+       menu_text_left_sale: menu_text_left_sale,
+       collection_product: product_collection,
+       product_limit: product_limit,
+       mega_tyle: mega_tyle,
+       alignment: alignment %}
+    {%- else -%}
+      {% render 'halo-dropdownmenu'
+       link: link,
+       title: title,
+       sale_item_lv1: sale_item_lv1,
+       sale_item_lv2: sale_item_lv2,
+       sale_item_lv3: sale_item_lv3,
+       show_label_blink: show_label_blink,
+       new_label_1: new_label_1,
+       new_label_2: new_label_2,
+       new_label_3: new_label_3,
+       sale_label_1: sale_label_1,
+       sale_label_2: sale_label_2,
+       sale_label_3: sale_label_3,
+       hot_label_1: hot_label_1,
+       hot_label_2: hot_label_2,
+       hot_label_3: hot_label_3,
+       dropdown_alignment: dropdown_alignment,
+       alignment: alignment %}
+    {%- endif -%}
+  {%- endfor -%}
 </ul>

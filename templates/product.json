@@ -62,6 +62,40 @@
             "spacing_bottom": 12
           }
         },
+        "dfbec24d-5183-4906-acad-11ffd195c8c1": {
+          "type": "quantity_selector",
+          "settings": {
+            "qty_style": "1",
+            "qty_layout": "1",
+            "spacing_top": 0,
+            "spacing_bottom": 10
+          }
+        },
+        "54ac1d16-9689-4c73-b50a-813c16502ac9": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "spacing_top": 0,
+            "spacing_bottom": 15,
+            "atc_animation": "none",
+            "atc_color": "#ffffff",
+            "atc_border_color": "#232323",
+            "atc_bg_color": "#232323",
+            "atc_bg_color_gradient": "",
+            "atc_color_hover": "#232323",
+            "atc_border_color_hover": "#232323",
+            "atc_bg_color_hover": "#ffffff",
+            "atc_bg_color_gradient_hover": "",
+            "bin_color": "#232323",
+            "bin_border_color": "#acacac",
+            "bin_bg_color": "#ffffff",
+            "bin_bg_color_gradient": "",
+            "bin_color_hover": "#ffffff",
+            "bin_border_color_hover": "#232323",
+            "bin_bg_color_hover": "#232323",
+            "bin_bg_color_hover_gradient": ""
+          }
+        },
         "19de9abb-17c8-4d67-941d-b32706ed06fd": {
           "type": "pickup_availability",
           "settings": {
@@ -109,40 +143,6 @@
             "spacing_top": 0,
             "spacing_bottom": 12
           }
-        },
-        "dfbec24d-5183-4906-acad-11ffd195c8c1": {
-          "type": "quantity_selector",
-          "settings": {
-            "qty_style": "1",
-            "qty_layout": "1",
-            "spacing_top": 0,
-            "spacing_bottom": 10
-          }
-        },
-        "54ac1d16-9689-4c73-b50a-813c16502ac9": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": false,
-            "spacing_top": 0,
-            "spacing_bottom": 15,
-            "atc_animation": "none",
-            "atc_color": "#ffffff",
-            "atc_border_color": "#232323",
-            "atc_bg_color": "#232323",
-            "atc_bg_color_gradient": "",
-            "atc_color_hover": "#232323",
-            "atc_border_color_hover": "#232323",
-            "atc_bg_color_hover": "#ffffff",
-            "atc_bg_color_gradient_hover": "",
-            "bin_color": "#232323",
-            "bin_border_color": "#acacac",
-            "bin_bg_color": "#ffffff",
-            "bin_bg_color_gradient": "",
-            "bin_color_hover": "#ffffff",
-            "bin_border_color_hover": "#232323",
-            "bin_bg_color_hover": "#232323",
-            "bin_bg_color_hover_gradient": ""
-          }
         }
       },
       "block_order": [
@@ -152,13 +152,13 @@
         "bd3a641e-98d0-4da1-ab57-d5e4b0391995",
         "d98e243b-3682-495a-965a-1c7f7d460880",
         "d97e417a-941b-4a5d-bef3-a651adb918d8",
+        "dfbec24d-5183-4906-acad-11ffd195c8c1",
+        "54ac1d16-9689-4c73-b50a-813c16502ac9",
         "19de9abb-17c8-4d67-941d-b32706ed06fd",
         "10093fcf-2053-47e9-bedb-841bb0d046fa",
         "bd066b80-c8e3-4f3e-8280-b27fbf6e9423",
         "19ab1d9f-74b2-4c76-bf2e-1bc749e5c2a3",
-        "a86220cf-8641-4e06-87d3-b5ffa195501b",
-        "dfbec24d-5183-4906-acad-11ffd195c8c1",
-        "54ac1d16-9689-4c73-b50a-813c16502ac9"
+        "a86220cf-8641-4e06-87d3-b5ffa195501b"
       ],
       "settings": {
         "container": "default",
@@ -181,7 +181,7 @@
         "count_color": "#191919",
         "icon_color": "#000000",
         "show_thumbnail_mobile": true,
-        "thumnail_layout": "3",
+        "thumnail_layout": "1",
         "thumbnail_to_show": 4,
         "show_sidebar": false,
         "show_sidebar_collapse": true,

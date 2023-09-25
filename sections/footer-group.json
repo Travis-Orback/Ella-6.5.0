@@ -44,7 +44,7 @@
             "footer_bottom_bg_gradient": "",
             "show_copyright": true,
             "enable_layout_grid": false,
-            "copyright_content": "<p>© 2023 S&G Apparel Inc. Powaered By Shopify. <\/p>",
+            "copyright_content": "<p>© 2023 S&G Apparel Inc.<\/p>",
             "copyright_content_color": "#505050",
             "show_payment": false,
             "payment_margin_top": 0,

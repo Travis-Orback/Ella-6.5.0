@@ -24,14 +24,7 @@
 
 -%}
 <div class="productView-buttons">
-  {%- assign product_form_installment_id = 'product-form-installment-' | append: product.id -%}
-  {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
-    <input
-      type="hidden"
-      name="id"
-      value="{{ current_variant.id }}">
-    {{ form | payment_terms }}
-  {%- endform -%}
+
   {%- assign product_form_id = 'product-form-' | append: product.id -%}
   <product-form class="productView-form product-form">
     {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
@@ -59,11 +52,11 @@
           {%- endif -%}
           <div class="productView-groupTop">
             <div class="productView-action{% unless settings.show_wishlist %} productView-action-2{% endunless %}" style="--atc-color: {{ atc_color }};
-                                                                   --atc-bg-color: {% if atc_bg_color_gradient != blank %}{{ atc_bg_color_gradient }}{% else %}{{ atc_bg_color }}{% endif %};
-                                                                   --atc-border-color: {{ atc_border_color }};
-                                                                   --atc-color-hover: {{ atc_color_hover }};
-                                                                   --atc-bg-color-hover: {% if atc_bg_color_gradient_hover != blank %}{{ atc_bg_color_gradient_hover }}{% else %}{{ atc_bg_color_hover }}{% endif %};
-                                                                   --atc-border-color-hover: {{ atc_border_color_hover }}">
+                                                                                   --atc-bg-color: {% if atc_bg_color_gradient != blank %}{{ atc_bg_color_gradient }}{% else %}{{ atc_bg_color }}{% endif %};
+                                                                                   --atc-border-color: {{ atc_border_color }};
+                                                                                   --atc-color-hover: {{ atc_color_hover }};
+                                                                                   --atc-bg-color-hover: {% if atc_bg_color_gradient_hover != blank %}{{ atc_bg_color_gradient_hover }}{% else %}{{ atc_bg_color_hover }}{% endif %};
+                                                                                   --atc-border-color-hover: {{ atc_border_color_hover }}">
               <input
                 type="hidden"
                 name="id"
@@ -182,11 +175,11 @@
                 {% endif %}
                 id="product-checkout-{{ product.id }}"
                 style="--bin-color: {{ bin_color }};
-                                                                           --bin-bg-color: {% if bin_bg_color_gradient != blank %}{{ bin_bg_color_gradient }}{% else %}{{ bin_bg_color }}{% endif %};
-                                                                           --bin-border-color: {{ bin_border_color }};
-                                                                           --bin-color-hover: {{ bin_color_hover }};
-                                                                           --bin-bg-color-hover: {% if bin_bg_color_hover_gradient != blank %}{{ bin_bg_color_hover_gradient }}{% else %}{{ bin_bg_color_hover }}{% endif %};
-                                                                           --bin-border-color-hover: {{ bin_border_color_hover }}">
+                                                                                             --bin-bg-color: {% if bin_bg_color_gradient != blank %}{{ bin_bg_color_gradient }}{% else %}{{ bin_bg_color }}{% endif %};
+                                                                                             --bin-border-color: {{ bin_border_color }};
+                                                                                             --bin-color-hover: {{ bin_color_hover }};
+                                                                                             --bin-bg-color-hover: {% if bin_bg_color_hover_gradient != blank %}{{ bin_bg_color_hover_gradient }}{% else %}{{ bin_bg_color_hover }}{% endif %};
+                                                                                             --bin-border-color-hover: {{ bin_border_color_hover }}">
                 {{ form | payment_button }}
               </div>
             </div>

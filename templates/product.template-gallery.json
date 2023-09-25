@@ -279,7 +279,7 @@
         "icon_color": "#000000",
         "show_thumbnail_mobile": true,
         "thumnail_layout": "4",
-        "thumbnail_to_show": 6,
+        "thumbnail_to_show": 8,
         "show_sidebar": false,
         "show_sidebar_collapse": true,
         "enable_sticky": false,

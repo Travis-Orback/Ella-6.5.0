@@ -1,3 +1,139 @@
+
+<!-- BEGIN USF -->
+{{ 'component-grid.css' | asset_url | stylesheet_tag }}
+{{ 'component-product-listing.css' | asset_url | stylesheet_tag }}
+
+<!--begin usf settings-->
+          {% liquid
+          assign media_size = settings.product_block_image_ratio
+    if media_size == 'portrait'
+        assign portrait_aspect_ratio = settings.portrait_height
+    endif 
+            assign show_quick_view = false
+    if settings.show_quick_view and settings.product_quick_view_type == 'icon'
+        assign show_quick_view = true
+    endif
+            assign show_wishlist = false
+    if settings.show_wishlist_card and settings.show_wishlist
+        assign show_wishlist = true
+    endif
+             assign show_compare = false
+    if settings.show_compare and settings.product_compare_type == 'icon'
+        assign show_compare = true
+    endif
+            assign product_swatch_option = settings.swatch | downcase
+             assign layout = section.settings.layout
+             
+          %}
+          {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+    	{%- if settings.product_compare_type == 'default' -%}
+		{% assign compare_class = 'compare-button' %}
+	{%- else -%}
+		{% assign compare_class = 'compare-icon' %}
+	{%- endif -%}
+ {% capture usf_wrap_class %}productListing{% if section.settings.collection_results_per_row == 1 %} productList{% else %} productGrid column-{{ layout }}{% endif %} list-{{ layout }} list-unstyled{% endcapture %}
+<script>
+  window._usfLayout = {{ layout | json }};
+  window._usf_wrap_class = {{ usf_wrap_class | json }};
+  window._usfGlobalSettings = {
+    enable_background_button_card: {{ settings.enable_background_button_card | json }},
+    show_badge: {{ settings.show_badge | json }},
+    show_sold_out_badge: {{ settings.show_sold_out_badge | json }},
+    badge_postion: {{ settings.badge_postion | json }},
+    show_sale_badge: {{ settings.show_sale_badge | json }},
+    sale_badge_type: {{ settings.sale_badge_type | json }},
+    show_custom_badge: {{ settings.show_custom_badge| json }},
+    show_bundle_badge: {{ settings.show_bundle_badge | json }},
+    show_new_badge: {{ settings.show_new_badge | json }},
+    new_badge_time: {{ settings.new_badge_time | json }},
+    new_badge_limit: {{ settings.new_badge_limit | json }},
+    new_badge_type: {{ settings.new_badge_type | json }},
+    show_image_swap: {{ settings.show_image_swap | json }},
+    image_swap: {{ settings.image_swap | json }},
+    show_compare: {{ settings.show_compare | json }},
+    product_compare_type: {{ settings.product_compare_type | json }},
+    portrait_height: {{ settings.portrait_height | json }},
+    enable_lazyload: {{ settings.enable_lazyload | json }},
+    show_image_loading: {{ settings.show_image_loading | json }},
+    image_loading_text: {{ settings.image_loading_text | json }},
+    show_quick_view: {{ settings.show_quick_view | json }},
+    product_quick_view_type: {{ settings.product_quick_view_type | json }},
+    show_wishlist_card: {{ settings.show_wishlist_card | json }},
+    show_wishlist: {{ settings.show_wishlist | json }},
+    show_compare: {{  settings.show_compare | json  }},
+    product_compare_type: {{  settings.product_compare_type | json  }},
+    product_card_layout: {{ settings.product_card_layout | json }},
+    product_content_text_align: {{ settings.product_content_text_align | json }},
+    display_item_size: {{ settings.display_item_size | json }},
+    show_action: {{ settings.show_action | json }},
+    show_vendor: {{ settings.show_vendor | json }},
+    product_title_line_text: {{ settings.product_title_line_text | json }},
+    quick_shop_type: {{ settings.quick_shop_type | json }},
+    style_text_color_varriant: {{ settings.style_text_color_varriant | json }},
+    show_swatch: {{ settings.show_swatch | json }},
+    swatch_type: {{ settings.swatch_type | json }},
+    display_text_size: {{ settings.display_text_size | json }},
+    disable_product_card_border: {{ settings.disable_product_card_border | json }},
+    enable_custom_layout_card: {{ settings.enable_custom_layout_card | json }},
+    group_quickview_wishlist: {{ settings.group_quickview_wishlist | json }},
+    show_notify_form: {{ settings.show_notify_form | json }},
+    show_review: {{ settings.show_review | json }},
+    show_wishlist_card_mb: {{ settings.show_wishlist_card_mb | json }},
+    show_product_marquee: {{ settings.show_product_marquee | json }},
+    show_quick_view_mb: {{ settings.show_quick_view_mb | json }},
+  };
+  window._usf_product_swatch_option = {{ product_swatch_option | json }};
+  window._usfSectionId = 'usf-template';
+  window._usf_compare_class = {{  compare_class | json }};
+  window._usf_show_compare = {{  show_compare | json }},
+  window._usf_show_wishlist = {{ show_wishlist | json }};
+  window._usf_show_quick_view = {{ show_quick_view | json }};
+  window._usfNoImageSvg = {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' | json }};
+  window._usf_media_size = {{ media_size | json }};
+  window._usfCustomBadgeTxt = {{ 'products.product.custom' | t | json }};
+  window._usfBundleTxt = {{ 'products.product.bundle' | t | json }};
+  window._usfNewText = {{ 'products.product.new' | t | json }};
+  window._usfAddWishlistTxt = {{ 'wishlist.general.add' | t | json }};
+  window._usfCompareTitle = {{ 'compare.general.title' | t | json }};
+  window._usfVendorText = {{ 'accessibility.vendor' | t | json }};
+  window._usfMoreSizeTxt = {{ 'products.product.more_sizes' | t | json }};
+  window._usf_collection_layout = {{ settings.collection_layout | json }};
+  window._usfImageTxt = {{ 'sections.collection_template.image' | t | json }};
+  window._usfProductTxt = {{ 'sections.collection_template.product' | t | json }};
+  window._usfPriceTxt = {{ 'sections.collection_template.price' | t | json }};
+  window._usfQtyTxt = {{ 'sections.collection_template.qty' | t | json }};
+  window._usfOptionsTxt = {{ 'sections.collection_template.options' | t | json }};
+  window._usfShowVariantsTxt = {{ 'sections.collection_template.show_variants' | t | json }};
+  window._usfSectionSettings = {{ section.settings | json}};
+  window._usf_sidebar_type = {{ section.settings.sidebar_type | json }};
+</script>
+          {{ 'component-pagination.css' | asset_url | stylesheet_tag }}
+ {{ 'component-toolbar.css' | asset_url | stylesheet_tag }}
+
+<!--end usf settings-->
+
+{% assign collection_layout = settings.collection_layout %}
+
+{% if collection_layout == "default" %}
+    {% render 'collection-product-grid' %}
+{% elsif collection_layout == "express_order" %}
+    {% render 'collection-express-order' %}
+{% elsif collection_layout == "full_width" %}
+    {% render 'collection-full-width' %}
+{% elsif collection_layout == "masonry" %}
+    {% render 'collection-masonry' %} 
+{% elsif collection_layout == "right_sidebar" %}
+    {% render 'collection-right-sidebar' %} 
+{% elsif collection_layout == "banner_adv" %}
+    {% render 'collection-banner-adv' %} 
+{% endif %}
+
+{% render 'schema',
+    collection: collection
+%}
+<!-- END USF -->
+
+{% comment %}USF
 {{ 'component-grid.css' | asset_url | stylesheet_tag }}
 {{ 'component-product-listing.css' | asset_url | stylesheet_tag }}
 
@@ -21,6 +157,8 @@
     collection: collection
 %}
 
+
+USF{% endcomment %}
 {% schema %}
 {
     "name": "t:sections.main-collection-product-grid.name",

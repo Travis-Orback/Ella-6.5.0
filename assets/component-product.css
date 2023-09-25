@@ -3350,12 +3350,12 @@ quantity-input.disabled {
         display: flex;
         flex-wrap: nowrap;
         align-items: flex-start;
-        justify-content: flex-start;
+        justify-content: space-between;
     }
 
     .productView.layout-1 .productView-image-wrapper,
     .productView.layout-2 .productView-image-wrapper{
-        width: calc(100% - 100px);
+        width: calc(100% - 120px);
     }
 
     .productView.layout-2 .productView-image-wrapper{

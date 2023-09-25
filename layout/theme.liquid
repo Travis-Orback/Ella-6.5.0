@@ -16,7 +16,9 @@
   {% if settings.enable_layout_rtl and enable_iso_rtl %}
   dir="rtl"
   {% endif %}>
-  <head>{% render 'pagefly-head' %}
+  <head>
+{% include "starapps-core" %}
+{% render 'pagefly-head' %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -50,6 +52,8 @@
     {% endif %}
     {% render 'meta-tags' %}
     {{ content_for_header }}
+{% render 'usf' %}
+
 
     {% render 'variable' %}
     {% render 'global-style' %}
@@ -108,7 +112,9 @@
                 assign style_text_size_varriant = 'size_varriant_style_2'
             endif
         -%}
-  </head>
+  
+{% render 'gsf-conversion-pixels' %}
+</head>
 
   <body class="template-{{ request.page_type }} {{layout_body}} {{style_dots}} {{style_text_size_varriant}} {{style_arrows}} {{product_card_layout}} {{ banner_animation }}{% if settings.enable_button_disable_arrows %} enable_button_disable_arrows{% endif %}{% if settings.display_text_color_title %} enable_text_color_title{% endif %}{% if settings.style_text_color_varriant == '02' %} style_2_text_color_varriant{% endif %}{% if settings.hide_compare_homepage %} hide_compare_homepage{% endif %} {{ quick_shop_type }}{% if settings.show_image_loading %} show_image_loading{% endif %}{% if settings.show_effect_close %} show_effect_close{% endif %}{% if settings.enable_layout_rtl and enable_iso_rtl %} layout_rtl{% endif %}">
     <div class="body-content-wrapper">
@@ -187,5 +193,6 @@
     </div>
 
     {% render 'halo-sidebar' %}
-  </body>
+  {% render 'spurit_po2_theme_snippet' %}
+</body>
 </html>

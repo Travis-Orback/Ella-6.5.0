@@ -187,7 +187,7 @@
     "show_compare": false,
     "product_compare_type": "default",
     "show_wishlist_card": true,
-    "show_quick_view": true,
+    "show_quick_view": false,
     "product_quick_view_type": "icon",
     "group_quickview_wishlist": "right",
     "product_content_text_align": "left",
@@ -259,7 +259,12 @@
     "show_quick_edit_cart": true,
     "quick_edit_cart_picker_type": "button",
     "quick_view_layout": "3",
+    "show_quick_view_review": false,
+    "show_quick_view_sold_in": false,
     "show_quick_view_short_description": false,
+    "show_quick_view_vendor": false,
+    "show_quick_view_availability": false,
+    "show_quick_view_product_type": false,
     "show_countdown": false,
     "countdown_type": "all_product",
     "countdown_collection": "",
@@ -384,6 +389,7 @@
     "btn_3_color_hover": "#ffffff",
     "btn_3_border_hover": "#e9514b",
     "btn_3_bg_hover": "#e9514b",
+    "use_custom_js": true,
     "layout_header": "full",
     "header_custom_width_size": 1400,
     "layout_footer": "custom_width",
@@ -524,11 +530,6 @@
     "blocks": {
       "16278478101612877664": {
         "type": "shopify:\/\/apps\/pagefly-page-builder\/blocks\/app-embed\/83e179f7-59a0-4589-8c66-c0dddf959200",
-        "disabled": false,
-        "settings": {}
-      },
-      "10570433277407501837": {
-        "type": "shopify:\/\/apps\/simprosys-google-shopping-feed\/blocks\/gsf-gcr\/1f0b859e-9fa6-4007-97e8-4513aff5ff3b",
         "disabled": false,
         "settings": {}
       },

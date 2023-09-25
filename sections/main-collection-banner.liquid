@@ -262,7 +262,9 @@
                 </div>
             {%- endif -%}
         {%- endunless -%}
-        
+        <h1 class="page-header text-{{ page_title_alignment }}">
+                        {{ collection.title | escape }}
+                    </h1>
         {%- unless layout == '1' -%}
             {%- if collection_description_position == 'absolute' -%}
                 {%- if show_page_title -%}

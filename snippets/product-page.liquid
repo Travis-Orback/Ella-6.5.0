@@ -42,6 +42,7 @@
     assign show_subtotal = section.settings.show_subtotal
     assign subtotal_style = section.settings.subtotal_style
     assign show_subtotal_text = false
+    assign minimum_order_amount = 10000 | divided_by: current_variant.price | round | plus: 1
     assign subtotal = 0
     if show_subtotal
         assign show_subtotal_text = true
@@ -935,6 +936,14 @@
                                                         use_variant: true,
                                                         price_class: 'price--medium'
                                                     -%}
+                                                    {%- assign product_form_installment_id = 'product-form-installment-' | append: product.id -%}
+                                                    {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
+                                                      <input
+                                                        type="hidden"
+                                                        name="id"
+                                                        value="{{ current_variant.id }}">
+                                                      {{ form | payment_terms }}
+                                                    {%- endform -%}
                                                 </div>
                                             {% endif %}
                                         </div>
@@ -1035,7 +1044,7 @@
                                                             quantity_stt: 2
                                                         %}
                                                     </div>
-                                                        <span>Pack Price: </span>{{ current_variant.price | times: 6 | money }}<span>/pack</span>
+                                                        <span>Pack Price: </span>{{ current_variant.price | times: 6 | money }}<span> /pack</span>
                                                     {%- if show_subtotal and subtotal_style == '1' -%}
                                                         <div class="productView-subtotal">
                                                             <span class="text">{{ 'sections.cart.subtotal' | t | append: ': ' }}</span>

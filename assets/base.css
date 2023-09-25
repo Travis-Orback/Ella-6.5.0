@@ -1897,7 +1897,7 @@ summary::-webkit-details-marker {
 /* START: Section Header */
     .shopify-section-header-sticky {
         position: sticky;
-        top: 0;
+        top: 0px;
         transition: opacity .1s,visibility .2s,transform .2s,-webkit-transform .2s,top .2s;
     }
 

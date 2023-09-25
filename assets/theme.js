@@ -2825,7 +2825,7 @@
                 });
             });
         },
-
+        
         updateCart: function(cart){
             if(!$.isEmptyObject(cart)){
                 const $sectionId = $('#main-cart-items').data('id');
@@ -2840,6 +2840,7 @@
                         </div>\
                     </div>';
                 const loadingClass = 'is-loading';
+                const $checkoutValidity = $('.checkout-validity');
 
                 $cart
                     .addClass(loadingClass)
@@ -2861,17 +2862,33 @@
                                 subTotal = response.find('[data-cart-total] .cart-total-subtotal').html(),
                                 grandTotal = response.find('[data-cart-total] .cart-total-grandtotal').html(),
                                 savings = response.find('[data-cart-total] .cart-total-savings').html();
+                                
+                              
 
                             $cartContent.find('.cart').html(contentCart);
                             $cartTotals.find('.cart-total-subtotal').html(subTotal);
                             $cartTotals.find('.cart-total-grandtotal').html(grandTotal);
                             $cartTotals.find('.cart-total-savings').html(savings);
-
                             if(response.find('.haloCalculatorShipping').length > 0){
                                 var calculatorShipping = response.find('.haloCalculatorShipping');
 
                                 $cart.find('.haloCalculatorShipping').replaceWith(calculatorShipping);
                             }
+                            var total_price = $(".cart-total-grandtotal .cart-total-value").attr("data-cart-total-value");
+                            if (total_price > 10000) {
+                                $(".cart-actions").show();
+                            } else {
+                                $(".cart-actions").hide();
+                            }
+
+                            checkout_buttons = document.querySelector(".cart-actions");
+                            
+                            if (10000 - total_price < 0) {
+                                $(".checkout-validity").text("Your cart meets our minimum order requirement")
+                            } else {
+                                $('.checkout-validity').text("Add $" + ((10000 - total_price)/100).toFixed(2) + " to meet our minimum order requirement")
+                            }
+
                         } else {
                             var contentCart =  response.find('#main-cart-items').html(),
                                 headerCart =  response.find('.page-header').html();
@@ -5787,4 +5804,10 @@
             }
         }
     }
+
+<!-- BEGIN USF -->
+
+        window._usfHalo = halo
+        
+<!-- END USF -->
 })(jQuery);

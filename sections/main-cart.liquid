@@ -424,6 +424,14 @@
                                             <span class="text">{{ cart.total_price | money }}</span>
                                         </div>  
                                     </li>
+                                    <div class="checkout-validity" style="font-size: 16px; font-weight: bold; margin-top: 30px; margin-bottom: 15px;"> 
+                                        {% if cart.total_price < 10000 %}
+                                        Add <span id="minimum_order_price">{{ 10000 | minus: cart.total_price | money }}</span> to meet our minimum order requirement
+                                        {% else %}
+                                        Your cart meets our minimum order requirement
+                                        {% endif %}
+                                    </div>
+                                    <span style="font-size: 16px; font-weight: bold;">MINIMUM ORDER $100.00</span>
                                     {% if settings.show_shipping_note %}
                                         <li class="shipTotal">
                                             <p class="cart-total-value form-text">
@@ -432,35 +440,40 @@
                                         </li>  
                                     {% endif %}
                                 </ul>
-                                <div class="cart-actions">
-                                    {%- if settings.show_global_checkbox -%}
-                                        <div class="cart-checkbox global-checkbox">
-                                            <input class="global-checkbox--input" type="checkbox" name="conditions" id="cart_conditions" data-target="#cart-checkout">
-                                            <label class="global-checkbox--label form-label--checkbox" for="cart_conditions">
-                                                {{ settings.global_checkbox_text }}
-                                            </label>
-                                            {%- if settings.global_checkbox_link_text != blank -%}
-                                                <a href="javascript:void(0)" data-term-condition>
-                                                    {{ settings.global_checkbox_link_text | escape }}
+                                
+
+                                    <div class="cart-actions" style="{% if cart.total_price < 10000 %} display: none;
+                                        
+                                    {% endif %}">
+                                        {%- if settings.show_global_checkbox -%}
+                                            <div class="cart-checkbox global-checkbox">
+                                                <input class="global-checkbox--input" type="checkbox" name="conditions" id="cart_conditions" data-target="#cart-checkout">
+                                                <label class="global-checkbox--label form-label--checkbox" for="cart_conditions">
+                                                    {{ settings.global_checkbox_text }}
+                                                </label>
+                                                {%- if settings.global_checkbox_link_text != blank -%}
+                                                    <a href="javascript:void(0)" data-term-condition>
+                                                        {{ settings.global_checkbox_link_text | escape }}
+                                                    </a>
+                                                {%- endif -%}
+                                            </div>
+                                        {%- endif -%}
+                                        <div class="action-group">
+                                            <button class="button button-1 button-checkout" {% if settings.show_global_checkbox %} disabled="disabled" {% endif %} id="cart-checkout" data-href="{{ routes.cart_url | split: '/cart' | first }}/checkout">
+                                                {{ 'sections.cart.proceed_to_checkout' | t }}
+                                            </button>
+                                            {% if continue_button_action == "1" %}
+                                                <a class="button button-2 button-continue"{% if custom_button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ custom_button_link }}"{% endif %} role="button">
+                                                    {{ 'general.continue_shopping' | t }}
                                                 </a>
-                                            {%- endif -%}
-                                        </div>
-                                    {%- endif -%}
-                                    <div class="action-group">
-                                        <button class="button button-1 button-checkout" {% if settings.show_global_checkbox %} disabled="disabled" {% endif %} id="cart-checkout" data-href="{{ routes.cart_url | split: '/cart' | first }}/checkout">
-                                            {{ 'sections.cart.proceed_to_checkout' | t }}
-                                        </button>
-                                        {% if continue_button_action == "1" %}
-                                            <a class="button button-2 button-continue"{% if custom_button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ custom_button_link }}"{% endif %} role="button">
-                                                {{ 'general.continue_shopping' | t }}
-                                            </a>
-                                        {% else %}
-                                            <a class="button button-2 button-continue" role="link" aria-disabled="true" onclick="window.history.back();" role="button" id="cart-previous-page-btn">
-                                                {{ 'general.back_to_previous_page' | t }}
-                                            </a>
-                                        {% endif %}
-                                    </div> 
-                                </div>
+                                            {% else %}
+                                                <a class="button button-2 button-continue" role="link" aria-disabled="true" onclick="window.history.back();" role="button" id="cart-previous-page-btn">
+                                                    {{ 'general.back_to_previous_page' | t }}
+                                                </a>
+                                            {% endif %}
+                                        </div> 
+                                    </div>
+                                                              
                             </form>
                         </div>
                     </div>

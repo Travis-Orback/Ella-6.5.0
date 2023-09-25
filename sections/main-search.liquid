@@ -1,3 +1,532 @@
+
+<!-- BEGIN USF -->
+{{ 'component-grid.css' | asset_url | stylesheet_tag }}
+{{ 'component-product-listing.css' | asset_url | stylesheet_tag }}
+{{ 'component-main-search.css' | asset_url | stylesheet_tag }}
+{{ 'component-toolbar.css' | asset_url | stylesheet_tag }}
+{{ 'component-article-card.css' | asset_url | stylesheet_tag}}
+  {% assign page_title  =  'general.search.search' | t %}
+    <script>
+        document.title = '{{ page_title }} - {{ shop.name}}'; 
+    </script>
+{%- liquid
+    assign padding_top = section.settings.mg_top_desktop | append: 'px'
+    assign padding_bottom = section.settings.mg_bottom_desktop | append: 'px'
+    assign padding_top_tablet = section.settings.mg_top_tablet | append: 'px'
+    assign padding_bottom_tablet = section.settings.mg_bottom_tablet | append: 'px'
+    assign padding_top_mobile = section.settings.mg_top_mobile | append: 'px'
+    assign padding_bottom_mobile = section.settings.mg_bottom_mobile | append: 'px'
+    assign container = section.settings.container
+    assign side_padding_full_width = section.settings.side_padding_full_width | append: 'px'
+    assign show_breadcrumb = section.settings.show_breadcrumb
+    assign breadcrumb_alignment = section.settings.breadcrumb_alignment
+    assign show_page_title = section.settings.show_page_title
+    assign page_title_alignment = section.settings.page_title_alignment
+    assign has_sidebar = false
+    assign show_sidebar = section.settings.show_sidebar
+    assign show_filter = section.settings.show_filter
+    assign filter_type = 'storefront'
+    assign sidebar_type = section.settings.sidebar_type
+    assign sidebar_position = section.settings.sidebar_position
+    assign show_sidebar_collapse = section.settings.show_sidebar_collapse
+    assign sidebar_collapse_default = section.settings.sidebar_collapse_default
+    if show_sidebar
+        assign has_sidebar = true
+        assign filter_by_tags = section.blocks | where: "type", "filter"
+        if show_filter
+            assign filter_swatch = section.settings.filter_swatch
+            assign filter_swatch_type = section.settings.filter_swatch_type
+            assign filter_rectangle = section.settings.filter_rectangle
+        endif 
+    endif
+    assign media_size = settings.product_block_image_ratio
+    if media_size == 'portrait'
+        assign portrait_aspect_ratio = settings.portrait_height
+    endif 
+    assign sort_by = collection.sort_by | default: collection.default_sort_by
+    assign sort_options = collection.sort_options
+    assign layout = section.settings.layout
+    assign products_per_page =  section.settings.products_per_page
+    assign show_toolbar = false
+    if show_toolbar
+        assign show_sorting = section.settings.show_sorting
+        assign show_view_as = section.settings.show_view_as
+    endif
+    assign show_infinite_scrolling = section.settings.show_infinite_scrolling
+    if has_sidebar
+        assign sidebar_heading_font = section.settings.sidebar_heading_font
+        assign sidebar_heading_font_size = section.settings.sidebar_heading_font_size
+        assign sidebar_heading_font_weight = section.settings.sidebar_heading_font_weight
+        assign sidebar_heading_text_transform = section.settings.sidebar_heading_text_transform
+        assign enable_sticky = section.settings.enable_sticky
+        assign sidebar_layout = section.settings.sidebar_layout
+    endif
+    if settings.search_type == 'all'
+        assign article_page_per_load = section.settings.article_page_per_load
+    endif 
+-%}
+<!--begin usf settings-->
+          {% liquid
+          assign media_size = settings.product_block_image_ratio
+    if media_size == 'portrait'
+        assign portrait_aspect_ratio = settings.portrait_height
+    endif 
+            assign show_quick_view = false
+    if settings.show_quick_view and settings.product_quick_view_type == 'icon'
+        assign show_quick_view = true
+    endif
+            assign show_wishlist = false
+    if settings.show_wishlist_card and settings.show_wishlist
+        assign show_wishlist = true
+    endif
+             assign show_compare = false
+    if settings.show_compare and settings.product_compare_type == 'icon'
+        assign show_compare = true
+    endif
+            assign product_swatch_option = settings.swatch | downcase
+             assign layout = section.settings.layout
+             
+          %}
+          {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+    	{%- if settings.product_compare_type == 'default' -%}
+		{% assign compare_class = 'compare-button' %}
+	{%- else -%}
+		{% assign compare_class = 'compare-icon' %}
+	{%- endif -%}
+ {% capture usf_wrap_class %}productListing{% if section.settings.collection_results_per_row == 1 %} productList{% else %} productGrid column-{{ layout }}{% endif %} list-{{ layout }} list-unstyled{% endcapture %}
+<script>
+  window._usfLayout = {{ layout | json }};
+  window._usf_wrap_class = {{ usf_wrap_class | json }};
+  window._usfGlobalSettings = {
+    enable_background_button_card: {{ settings.enable_background_button_card | json }},
+    show_badge: {{ settings.show_badge | json }},
+    show_sold_out_badge: {{ settings.show_sold_out_badge | json }},
+    badge_postion: {{ settings.badge_postion | json }},
+    show_sale_badge: {{ settings.show_sale_badge | json }},
+    sale_badge_type: {{ settings.sale_badge_type | json }},
+    show_custom_badge: {{ settings.show_custom_badge| json }},
+    show_bundle_badge: {{ settings.show_bundle_badge | json }},
+    show_new_badge: {{ settings.show_new_badge | json }},
+    new_badge_time: {{ settings.new_badge_time | json }},
+    new_badge_limit: {{ settings.new_badge_limit | json }},
+    new_badge_type: {{ settings.new_badge_type | json }},
+    show_image_swap: {{ settings.show_image_swap | json }},
+    image_swap: {{ settings.image_swap | json }},
+    show_compare: {{ settings.show_compare | json }},
+    product_compare_type: {{ settings.product_compare_type | json }},
+    portrait_height: {{ settings.portrait_height | json }},
+    enable_lazyload: {{ settings.enable_lazyload | json }},
+    show_image_loading: {{ settings.show_image_loading | json }},
+    image_loading_text: {{ settings.image_loading_text | json }},
+    show_quick_view: {{ settings.show_quick_view | json }},
+    product_quick_view_type: {{ settings.product_quick_view_type | json }},
+    show_wishlist_card: {{ settings.show_wishlist_card | json }},
+    show_wishlist: {{ settings.show_wishlist | json }},
+    show_compare: {{  settings.show_compare | json  }},
+    product_compare_type: {{  settings.product_compare_type | json  }},
+    product_card_layout: {{ settings.product_card_layout | json }},
+    product_content_text_align: {{ settings.product_content_text_align | json }},
+    display_item_size: {{ settings.display_item_size | json }},
+    show_action: {{ settings.show_action | json }},
+    show_vendor: {{ settings.show_vendor | json }},
+    product_title_line_text: {{ settings.product_title_line_text | json }},
+    quick_shop_type: {{ settings.quick_shop_type | json }},
+    style_text_color_varriant: {{ settings.style_text_color_varriant | json }},
+    show_swatch: {{ settings.show_swatch | json }},
+    swatch_type: {{ settings.swatch_type | json }},
+    display_text_size: {{ settings.display_text_size | json }},
+    disable_product_card_border: {{ settings.disable_product_card_border | json }},
+    enable_custom_layout_card: {{ settings.enable_custom_layout_card | json }},
+    group_quickview_wishlist: {{ settings.group_quickview_wishlist | json }},
+    show_notify_form: {{ settings.show_notify_form | json }},
+    show_review: {{ settings.show_review | json }},
+    show_wishlist_card_mb: {{ settings.show_wishlist_card_mb | json }},
+    show_product_marquee: {{ settings.show_product_marquee | json }},
+    show_quick_view_mb: {{ settings.show_quick_view_mb | json }},
+  };
+  window._usf_product_swatch_option = {{ product_swatch_option | json }};
+  window._usfSectionId = 'usf-template';
+  window._usf_compare_class = {{  compare_class | json }};
+  window._usf_show_compare = {{  show_compare | json }},
+  window._usf_show_wishlist = {{ show_wishlist | json }};
+  window._usf_show_quick_view = {{ show_quick_view | json }};
+  window._usfNoImageSvg = {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' | json }};
+  window._usf_media_size = {{ media_size | json }};
+  window._usfCustomBadgeTxt = {{ 'products.product.custom' | t | json }};
+  window._usfBundleTxt = {{ 'products.product.bundle' | t | json }};
+  window._usfNewText = {{ 'products.product.new' | t | json }};
+  window._usfAddWishlistTxt = {{ 'wishlist.general.add' | t | json }};
+  window._usfCompareTitle = {{ 'compare.general.title' | t | json }};
+  window._usfVendorText = {{ 'accessibility.vendor' | t | json }};
+  window._usfMoreSizeTxt = {{ 'products.product.more_sizes' | t | json }};
+  window._usf_collection_layout = {{ settings.collection_layout | json }};
+  window._usfImageTxt = {{ 'sections.collection_template.image' | t | json }};
+  window._usfProductTxt = {{ 'sections.collection_template.product' | t | json }};
+  window._usfPriceTxt = {{ 'sections.collection_template.price' | t | json }};
+  window._usfQtyTxt = {{ 'sections.collection_template.qty' | t | json }};
+  window._usfOptionsTxt = {{ 'sections.collection_template.options' | t | json }};
+  window._usfShowVariantsTxt = {{ 'sections.collection_template.show_variants' | t | json }};
+  window._usfSectionSettings = {{ section.settings | json}};
+  window._usf_sidebar_type = {{ section.settings.sidebar_type | json }};
+</script>
+          {{ 'component-pagination.css' | asset_url | stylesheet_tag }}
+ {{ 'component-toolbar.css' | asset_url | stylesheet_tag }}
+
+<!--end usf settings-->
+
+<div data-section-id="{{ section.id }}" data-section-type="search" id="SearchSection-{{ section.id }}" data-section="{{ section.id }}">
+    <div class="search-container {% if container == '1170' %}container-1170{% elsif container == '1770' %}container-1770{% elsif container == 'fullwidth'%} container-full{% else %}container{% endif %}">
+        {%- if show_breadcrumb -%}
+            {% render 'breadcrumb', alignment: breadcrumb_alignment %}
+        {%- endif -%}
+        {%- if show_page_title -%}
+            <h1 class="page-header text-{{ page_title_alignment }}">
+                 {{ 'templates.search.title' | t }}
+            </h1>
+        {%- endif -%}
+        <div class="halo-search-content halo-grid-content sidebar--layout_{{ sidebar_type }}">
+            {%- if search.performed and search.results.size > 0 -%}
+                {%- if has_sidebar -%}
+                    {{ 'component-main-sidebar.css' | asset_url | stylesheet_tag }}
+                    <div class="page-sidebar page-sidebar-{{ sidebar_position }} page-sidebar--{{ sidebar_type }} sidebar--{{ sidebar_layout }}{% if enable_sticky %} has-sticky{% endif %}" id="halo-sidebar">
+                        <a href="javascript:void(0)" class="halo-sidebar-close" data-close-sidebar role="button">
+                            <span class="visually-hidden">{{ 'general.common.close' | t }}</span>
+                            {% render 'icon-close' %}
+                        </a>
+                        <div class="halo-sidebar-header text-left">
+                            <span class="title">
+                                {{ 'sections.sidebar.title' | t }}
+                            </span>
+                        </div>
+                        <div class="halo-sidebar-wrapper custom-scrollbar">
+                            {% render 'collection-sidebar',
+                                results: search,
+                                section: section,
+                                sort_by: sort_by,
+                                sidebar_type: sidebar_type,
+                                show_filter: show_filter,
+                                filter_type: filter_type,
+                                filter_by_tags: filter_by_tags,
+                                show_sorting: show_sorting,
+                                show_collapse: show_sidebar_collapse,
+                                sidebar_collapse: sidebar_collapse_default,
+                                filter_swatch: filter_swatch,
+                                filter_swatch_type: filter_swatch_type,
+                                filter_rectangle: filter_rectangle
+                            %}
+                        </div>
+                    </div>
+                {%- endif -%}
+            {%- endif -%}
+            <div class="page-content" >
+                     <div class="collection collection--empty" id="main-collection-product-grid" data-id="{{ section.id }}">
+                        <form action="{{ routes.search_url }}" method="get" role="search" class="search-form">
+                            <input type="hidden" name="type" value="{{ search.terms | escape }}">
+                            <input type="hidden" name="options[prefix]" value="last"/>
+                            <div class="form-field form-fieldInline">
+                                <label class="form-label hiddenLabels" for="Search-In-Template" aria-hidden="true">
+                                    {{ 'general.search.search' | t }}
+                                </label>
+                                <input
+                                    class="search__input form-input form-input-placeholder"
+                                    id="Search-In-Template"
+                                    type="search"
+                                    name="q"
+                                    value="{{ search.terms | escape}}"
+                                    {% if search.performed %}
+                                        autofocus
+                                    {% endif %}
+                                    placeholder="{{ 'general.search.search' | t }}"
+                                >
+                                <button type="submit" class="search__button field__button button button--primary" aria-label="{{ 'general.search.search' | t }}">
+                                    {% render 'icon-search' %}
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+              
+                 <div class="collection">
+                            <div class="collection resultListing">
+                               <style>
+#usf_container{
+    visibility:hidden;
+}
+</style>
+<div id="usf_container"></div>
+<div class="usf-skeleton-container">
+	<style>              
+	  @media (max-width: 749px){
+		.usf-mobile-hidden{
+		  display: none !important;
+		}
+		.usf-skeleton-container .usf-sr-config__mobile-filters-wrapper{
+		  display: flex;
+		  width: 100%;
+		  flex-wrap: wrap;
+		}
+		.usf-skeleton-container .usf-filters, 
+		.usf-skeleton-container .usf-sr-config__mobile-filters-wrapper .usf-c-select{
+		  height: 49px;
+		  border: 1px solid #ededed;
+		  width: 50%;
+		  border-left: none;
+		  display: flex !important;
+		  align-items: center;
+		}
+		.usf-skeleton-container .usf-filters{
+		  border-left: 1px solid #ededed;
+		}
+
+		.usf-skeleton-container .usf-results{
+		  height: 400px;
+		  margin-left: -20px;
+		  display: flex;
+		  flex-wrap: wrap;
+		}
+		.usf-skeleton-container .usf-sr-config{
+		  display: flex;
+		  align-items: center;
+		  justify-content: space-between;
+		  margin-top: 13px;
+		  flex-wrap: wrap;
+		}
+		
+		.usf-skeleton-container .usf-sr-summary:before{
+		  margin: 0 !important;
+		  width: 100px !important;
+		}
+		.usf-skeleton-container .usf-views:before{
+		  margin: 0 !important;
+		  width: 50px !important;
+		  margin-left: auto !important;
+		}
+		.usf-skeleton-container .usf-grid__item{
+		  width: 50%;
+		  padding-left: 20px;
+		}
+		.usf-skeleton-container .usf-sr-summary, 
+		.usf-skeleton-container .usf-views{
+		  margin: 30px 0 20px 0;
+		  display: block;
+		  width: 50%;
+		}
+		
+		.usf-skeleton-container .usf-filters:before,
+		.usf-skeleton-container .usf-c-select:before{
+		  margin: 30px;
+		}
+	  }
+	  
+	  .usf-skeleton-container .usf-filters:before,
+	  .usf-skeleton-container .usf-c-select:before,
+	  .usf-skeleton-container .usf-sr-summary:before,
+	  .usf-skeleton-container .usf-views:before,
+	  .usf-skeleton-container .usf-facet .usf-title:before,
+	  .usf-skeleton-container .usf-facet .usf-body:before,
+	  .usf-skeleton-container .usf-facet .usf-body:after              
+	  {
+		content:'';
+		display: block;
+		background-color: #0000000b;
+		-webkit-animation: usf-skeleton-animation 2.3s infinite;
+		animation: usf-skeleton-animation 2.3s infinite;
+		height: 10px;
+		border-radius: 10px;
+		width: 100%;                
+	  }
+	  
+	  @keyframes usf-skeleton-animation {
+		0% {
+			opacity: 1
+		}
+
+		50% {
+			opacity: .5
+		}
+
+		100% {
+			opacity: 1
+		}
+	  }
+	  
+	  @media (min-width: 750px){
+		.usf-skeleton-container .usf-desktop-hidden{
+		  display: none !important;
+		}
+		.usf-skeleton-container .usf-facet .usf-title,
+		.usf-skeleton-container .usf-facet .usf-body,
+		.usf-skeleton-container .usf-c-select
+		{
+		  display: block !important;
+		}              
+	  
+		.usf-skeleton-container .usf-sr-config__mobile-filters-wrapper{
+		  display: none;
+		}
+		
+		.usf-skeleton-container .usf-facets{
+		  display: block;
+		  width: 23%;
+		  float: left;
+		  margin-top: 17px;
+		}
+		
+		.usf-skeleton-container .usf-sr-container {
+		  width: 77%;
+		  float: left;
+		  padding-left: 30px;
+		  margin-top: 17px;
+		}
+		
+		.usf-skeleton-container .usf-sr-config{
+		  display: flex;
+		}
+		
+		.usf-skeleton-container .usf-sr-config > .usf-c-select{
+		  width: 200px;
+		}
+		
+		.usf-skeleton-container .usf-sr-summary{
+		  width: 100%;
+		}
+		.usf-skeleton-container .usf-sr-summary:before{
+		  margin: auto;
+		  width: 200px;
+		}
+		.usf-skeleton-container .usf-views:before{
+		}
+		.usf-skeleton-container .usf-grid__item{
+		  width: 50%;
+		  padding-left: 20px;
+		}
+		.usf-skeleton-container .usf-views{
+		  display: block;
+		  width: 50px;
+		}
+		
+		.usf-skeleton-container .usf-sr-container{
+		  min-height: 700px;
+		}
+	  }  
+	  
+	  .usf-skeleton-container .usf-facet{
+		margin-bottom: 40px;
+	  }
+	  
+	  .usf-skeleton-container .usf-facet .usf-title:before{                
+		margin-bottom: 25px;
+		width: 70%;
+	  }
+	  
+	  .usf-skeleton-container .usf-facet .usf-body:before,
+	  .usf-skeleton-container .usf-facet .usf-body:after
+	  {
+		margin-bottom: 16px;
+	  }
+	</style>
+  
+	<div class="usf-facets usf-mobile-hidden">
+	  <div class="usf-facet">
+		<div class="usf-title"></div>
+		<div class="usf-body"></div>                
+	  </div>
+	  <div class="usf-facet">
+		<div class="usf-title"></div>
+		<div class="usf-body"></div>
+	  </div>
+	</div>
+	<div class="usf-sr-container">
+	  <div class="usf-sr-config">
+		<div class="usf-sr-config__mobile-filters-wrapper">
+		  <div class="usf-filters"></div>
+		  <div class="usf-c-select"></div>
+		</div>
+		<div class="usf-views usf-mobile-hidden"></div>
+		<span class="usf-sr-summary"></span>
+		<div class="usf-views usf-desktop-hidden"></div>
+		<div class="usf-c-select usf-mobile-hidden"></div>
+	  </div>
+	  <div class="usf-results usf-grid">
+		<div class="usf-grid__item"></div>
+		<div class="usf-grid__item"></div>
+		<div class="usf-grid__item"></div>
+		<div class="usf-grid__item"></div>
+	  </div>
+	</div>       
+</div>
+                             
+                            </div>
+            </div>
+        </div>
+    </div>
+    <div class="loading-overlay loading-overlay--custom">
+        <div class="loading-overlay__spinner">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<style type="text/css" media="screen">
+    :root {
+        {% if show_sidebar %}
+            {% if sidebar_heading_font == 'font_1' %}
+                --sidebar-heading-font: var(--font-heading-family);
+            {% elsif sidebar_heading_font == 'font_2' %}
+                --sidebar-heading-font: var(--font-body-family);
+            {% endif %}
+        {% endif %}
+    }
+
+    #SearchSection-{{ section.id }}{
+        padding-top: {{ padding_top }};
+        padding-bottom: {{ padding_bottom }};
+    }
+
+    #SearchSection-{{ section.id }} .container-full {
+        padding-left: {{ side_padding_full_width }};
+        padding-right: {{ side_padding_full_width }};
+    }
+
+    #SearchSection-{{ section.id }} .sidebarBlock-heading {
+        font-family: var(--sidebar-heading-font);
+        font-size: {{ sidebar_heading_font_size | append: 'px' }};
+        font-weight: {{ sidebar_heading_font_weight }};
+        text-transform: {{ sidebar_heading_text_transform }};
+    }
+
+    @media (max-width: 1024px) {
+        #SearchSection-{{ section.id }}{
+            padding-top: {{ padding_top_tablet }};
+            padding-bottom: {{ padding_bottom_tablet }};
+        }
+    }
+
+    @media (max-width: 550px) {
+        #SearchSection-{{ section.id }}{
+            padding-top: {{ padding_top_mobile }};
+            padding-bottom: {{ padding_bottom_mobile }};
+        }
+    }
+</style>
+
+{%- if settings.search_type == 'all' -%}
+    {{ 'halo.search-by-all-types.js' | asset_url | script_tag }}
+    <script type="text/javascript">
+        Shopify.SearchByAllTypes.renderResultTable({
+            sectionId: 'main-page-article-grid'
+        });
+
+        window.addEventListener('load', () => {
+            
+        })
+    </script>
+{%- endif -%}
+
+<!-- END USF -->
+
+{% comment %}USF
 {{ 'component-grid.css' | asset_url | stylesheet_tag }}
 {{ 'component-product-listing.css' | asset_url | stylesheet_tag }}
 {{ 'component-main-search.css' | asset_url | stylesheet_tag }}
@@ -247,13 +776,13 @@
                                                             </a>
                                                         </div>
                                                     </div>
-                                                {%- endpaginate -%}
+                                                {% assign sp_paginate_by = paginate.page_size %}{%- endpaginate -%}
                                             {%- endif -%}
                                         </div>
                                     </template>
                                 </div>
                             {%- endif -%}
-                        {%- endpaginate -%}
+                        {% assign sp_paginate_by = paginate.page_size %}{%- endpaginate -%}
                     {%- else -%}
                         <div class="collection collection--empty" id="main-collection-product-grid" data-id="{{ section.id }}">
                             <p class="collection-product-count ">
@@ -336,6 +865,8 @@
     </script>
 {%- endif -%}
 
+{% if sp_paginate_by %}{% render 'spurit_po2_collection_template_snippet', paginate_by: sp_paginate_by %}{% endif %}
+USF{% endcomment %}
 {% schema %}
 {
     "name": "t:sections.main_search.name",
